@@ -1,0 +1,129 @@
+.footer-component {
+  background-color: #313133;
+  color: aliceblue;
+  width: 100%;
+
+  .menu-wrapper {
+    max-width: 1366px;
+    margin: auto;
+    padding: 65px 25px 0px 25px;
+
+    .company-description {
+      margin-bottom: 30px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 50px 0 0;
+
+      .logo {
+        width: 120px;
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
+      .para {
+        margin-top: 10px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.79);
+        font-family: "Roboto", Sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.7em;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    .menu {
+      margin-bottom: 30px;
+      font-family: "Montserrat", Sans-serif;
+
+      .title {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      .subtitle {
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.79);
+
+        padding-bottom: 15px;
+
+        &:hover {
+          color: #feb449;
+        }
+      }
+    }
+  }
+
+  .line {
+    max-width: 1366px;
+    margin: auto;
+    height: 1px;
+
+    background-color: rgba(255, 255, 255, 0.39);
+  }
+
+  .copyright {
+    max-width: 1366px;
+    margin: 0 auto 0;
+
+    padding: 25px 10px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      color: rgba(255, 255, 255, 0.39);
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        cursor: pointer;
+        margin-left: 20px;
+        color: rgba(255, 255, 255, 0.45);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: #feb449;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer-component {
+    .menu-wrapper {
+      .company-description {
+        padding: 0 0px 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer-component {
+    .copyright {
+      flex-direction: column-reverse;
+
+      .left {
+        margin-top: 10px;
+      }
+    }
+  }
+}

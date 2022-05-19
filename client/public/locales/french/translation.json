@@ -1,0 +1,263 @@
+{
+  "home-heading": {
+    "1": "BIBLIOTHÈQUE BIM POUR"
+  },
+  "home-para": {
+    "1": "Bimroom est une bibliothèque d'objets BIM haut de gamme destinée à fournir à votre projet les meilleurs produits numériques disponibles. Notre contenu est exclusivement composé d'objets BIM entièrement paramétriques, soigneusement sélectionnés, qui vous permettent de donner vie à votre vision. Les objets Bimroom répondent à des critères de qualité stricts et possèdent les caractéristiques nécessaires pour garantir une modélisation fluide tout au long du cycle de vie de votre projet."
+  },
+  "home-button": {
+    "1": "Parcourir la bibliothèque"
+  },
+  "search": {
+    "1": "Recherche"
+  },
+  "search-input": {
+    "1": "Recherche par nom de produit, catégorie, marque..."
+  },
+  "search-button": {
+    "1": "Afficher tous les produits"
+  },
+  "categories": {
+    "1": "Catégories",
+    "2": "Afficher tous les produits"
+  },
+  "brands": {
+    "1": "Marques"
+  },
+  "footer": {
+    "1": "Bimroom est une bibliothèque d'objets BIM haut de gamme destinée à fournir à votre projet les meilleurs produits numériques disponibles. Notre contenu est exclusivement composé d'objets BIM entièrement paramétriques, soigneusement sélectionnés, qui vous permettent de donner vie à votre vision. Les objets Bimroom répondent à des critères de qualité stricts et possèdent les caractéristiques nécessaires pour garantir une modélisation fluide tout au long du cycle de vie de votre projet.",
+    "2": "Vue d'ensemble",
+    "3": "Bimroom Collection",
+    "4": "Plugin",
+    "5": "Tutoriels",
+    "6": "FABRICANTS",
+    "7": "Pourquoi Bimroom",
+    "8": "Caractéristiques personnalisées",
+    "9": "Formation",
+    "10": "Témoignages",
+    "13": "A propos de nous",
+    "14": "Solutions",
+    "15": "Durabilité",
+    "16": "Interaction",
+    "17": "Commentaires",
+    "18": "Support",
+    "19": "Nous contacter",
+    "20": "Blog",
+    "21": "© 2021 All rights reserved"
+  },
+  "product": {
+    "1": "Dos",
+    "2": "Rendu",
+    "3": "Produit",
+    "4": "PARAMÈTRES D'AFFICHAGE DU CATALOGUE",
+    "5": "THUMBNAILS",
+    "6": "RECHERCHER ET FILTRER DES PRODUITS",
+    "7": "Marque",
+    "8": "Sélectionnez",
+    "9": "Bimroom Collection (23)",
+    "10": "Catégorie",
+    "11": "Triage par défaut",
+    "12": "Trier par popularité",
+    "13": "Trier par note moyenne",
+    "14": "Trier par le plus récent",
+    "15": "Affichage de 1 à 20 sur 23 résultats",
+    "16": "Portes",
+    "17": "Portes pliantes(1)",
+    "18": "Portes à enroulement et portes sectionnelles (1)",
+    "19": "Portes coulissantes (2)",
+    "20": "Portes battantes (6)",
+    "21": "Meubles (2)",
+    "22": "Acoustique (1)",
+    "23": "Fauteuils et canapés de relaxation (1)",
+    "24": "Sanitaire (1)",
+    "25": "Toilettes  (1)",
+    "26": "Fenêtres (8)",
+    "27": "Fenêtres à charnières (5)",
+    "28": "Fenêtres à guillotine (2)",
+    "29": "Fenêtres coulissantes (1)",
+    "30": "Porte - Profilé métallique à double battant",
+    "31": "Télécharger",
+    "32": "Réinitialiser tous les filtres"
+  },
+  "catalog": {
+    "1": "Dos",
+    "2": "CATALOGUE",
+    "3": "MEUBLES",
+    "4": "FAUTEUILS ET FAUTEUILS INCLINABLES",
+    "5": "Fauteuil",
+    "6": "DESCRIPTION",
+    "7": "Les objets de la collection Bimroom sont des objets BIM génériques de haute qualité destinés à être utilisés dans le cadre d'une conception ou en tant qu'éléments de remplacement aux premiers stades d'un projet de conception, lorsqu'aucun fournisseur n'a encore été choisi.",
+    "8": "Les dimensions et le comportement paramétriques des objets de la collection Bimroom les rendent adaptables aux exigences de la plupart des projets de conception architecturale. La première priorité est qu'ils soient conviviaux, avec des paramètres prévisibles et des niveaux de détail adéquats pour répondre aux exigences du projet et maintenir une taille de fichier raisonnable.",
+    "9": "Les éléments de la collection Bimroom sont programmables et contiennent des représentations graphiques appropriées pour tous les types de dessins et de documentation. Leurs représentations 3D les plus détaillées comprennent des géométries et des matériaux prêts à être utilisés pour des rendus fixes de haute qualité, des animations ou des présentations en temps réel afin de donner vie au projet de manière simple et rapide.",
+    "10": "Il n'y a pas encore de commentaires.",
+    "11": "REVIEWS",
+    "12": "Laissez un commentaire",
+    "13": "Votre évaluation",
+    "14": "Votre avis",
+    "15": "Soumettre",
+
+    "16": "Télécharger l'objet",
+    "17": "RENDER",
+    "18": "VISUALISEUR 3D",
+
+    "19": "IMAGES DU PRODUIT",
+    "20": "INFORMATIONS SUR LE PRODUIT",
+    "21": "CLASSIFICATION",
+
+    "22": "DISPONIBILITÉ"
+  },
+  "Account": {
+    "1": "Aucun téléchargement n'est encore disponible.",
+
+    "2": "Parcourir les produits",
+    "3": "Les adresses suivantes seront utilisées par défaut sur la page de paiement.",
+    "4": "Adresse de facturation",
+    "5": "Adresse de livraison",
+
+    "6": "Vous n'avez pas encore configuré ce type d'adresse.",
+    "7": "Prénom",
+    "8": "Nom de famille",
+
+    "9": "Nom de l'entreprise (facultatif)",
+    "10": "Pays/Région",
+    "11": "Sélectionnez un pays / une région...",
+
+    "12": "Adresse de la rue",
+    "13": "Appartement, suite, unité, etc. (facultatif)",
+    "14": "Code postal / ZIP",
+
+    "15": "Town / City",
+    "16": "Canton (facultatif)",
+    "17": "Sélectionnez une option...",
+
+    "18": "Téléphone",
+    "19": "Adresse e-mail",
+    "20": "Sauvegarder l'adresse",
+
+    "21": "Numéro de la maison et nom de la rue",
+    "22": "Prénom",
+    "23": "Nom de famille",
+    "24": "Nom d'affichage",
+    "25": "Ce sera la façon dont votre nom sera affiché dans la section du compte et dans les commentaires",
+    "26": "Adresse e-mail",
+    "27": "Changement de mot de passe",
+    "28": "Mot de passe actuel (laissez vide pour ne pas le modifier)",
+    "29": "Nouveau mot de passe (laissez un blanc pour ne rien changer)",
+    "30": "Confirmer le nouveau mot de passe",
+    "31": "Enregistrer les modifications",
+    "32": "NOM",
+    "33": "EMAIL",
+    "34": "ORGANISATION",
+    "35": "ROLE",
+    "36": "Account",
+    "37": "Adresses",
+    "38": "Téléchargements",
+    "39": "Commentaires",
+    "40": "Sign Out",
+    "41": "Bonjour",
+    "42": "pas",
+    "43": "Déconnexion",
+    "44": "Depuis le tableau de bord de votre compte, vous pouvez voir votre",
+    "45": "commandes récentes",
+    "46": "gérer vos",
+    "47": "adresses de livraison et de facturation",
+    "48": "et",
+    "49": "modifier votre mot de passe et les détails de votre compte"
+  },
+  "wishlist": {
+    "1": "VOTRE LISTE DE SOUHAITS",
+    "2": "Aucun produit ajouté à la liste de souhaits",
+    "3": "Panneau Acoustique",
+    "4": "Fauteuil",
+    "5": "Téléchargements",
+    "6": ""
+  },
+  "modal": {
+    "1": "OBJETS BIM",
+    "2": "Panneau Acoustique",
+    "3": "Plus d'informations et matériel téléchargeable sur la page du produit",
+    "4": "",
+    "5": ""
+  },
+
+  "blog": {
+    "1": "Bimroom est la source premium de contenu BIM de haute qualité pour les professionnels de la conception de la construction. Notre objectif est de déplacer le centre d'intérêt de la modélisation des données du bâtiment du développement et de la coordination des logiciels vers la conception. Nous nous concentrons exclusivement sur des objets natifs de la BIM, qui ont fait leurs preuves, afin d'induire des avantages tangibles dans votre flux de travail.",
+    "2": "Tout le contenu de Bimroom, qu'il soit modélisé par nous ou fourni par le fabricant, est confirmé comme ayant une géométrie paramétrique fonctionnelle avec des détails appropriés, des paramétrages compréhensibles et une taille de fichier raisonnable. En outre, les objets sont accompagnés de toutes les informations pertinentes sur les caractéristiques, les performances et la durabilité.",
+    "3": "Plus d'heures passées à rechercher et télécharger des objets et à les réviser !",
+    "4": "Bimroom Collection est un assortiment d'objets BIM génériques de haute qualité à utiliser comme supports de remplacement avant de spécifier des produits, ou si aucun contenu BIM n'est facilement disponible du produit souhaité. La collection Bimroom permet de lancer facilement votre projet BIM en utilisant du contenu natif qu'il est facile de remplacer par des produits spécifiés par la suite.",
+    "5": "Les géométries et les matériaux des objets de Bimroom Collection sont soigneusement conçus pour soutenir vos efforts de modélisation à tous les niveaux de détail et tous les types de documentation, des croquis et plans 2D aux images fixes, animations et RV 3D de haute qualité.",
+    "6": "Disponible dans le cadre de Bimroom Premium au deuxième trimestre 2022 - Vérifiez les mises à jour !",
+    "7": "Bimroom est accessible en ligne ou directement dans votre application BIM préférée. Nos plugins logiciels offrent un accès transparent à tout le contenu de Bimroom et vous permettent de glisser et de déposer simplement des objets dans votre projet. De plus, vous pouvez créer, gérer et partager vos bibliothèques personnalisées personnelles pour créer des listes de favoris ou pour gérer des bibliothèques de produits spécifiques à vos projets.",
+    "8": "D'autres fonctionnalités visant à faciliter davantage vos efforts BIM et à améliorer la productivité de votre équipe sont en cours d'élaboration - Restez à l'écoute !",
+    "9": "Disponible dans le cadre de Bimroom Premium au deuxième trimestre 2022.",
+    "10": "",
+    "11": ""
+  },
+  "product-brand-c": {
+    "1": "Triage par défaut",
+    "2": "Tri par popularité",
+    "3": "Trier par note moyenne",
+    "4": "Trier par la plus récente",
+    "5": "Afficher les 23 résultats",
+    "6": "Collection Bimroom"
+  },
+  "sidebar": {
+    "1": "FAVORIS",
+    "2": "LOGOUT",
+    "3": "À PROPOS DE BIMROOM",
+    "4": "CONTACTEZ-NOUS",
+    "5": "BIMFORM AG",
+    "6": "DURABILITÉ",
+    "7": "CONNEXION"
+  },
+  "topnavbar": {
+    "1": "recherche",
+    "2": "Rechercher du contenu BIM",
+    "3": "OU ALLER À LA CATÉGORIE",
+    "4": "",
+    "5": "",
+    "6": ""
+  },
+  "categoryproduct": {
+    "1": "Cuisine",
+    "2": "Eclairage",
+    "3": "Sanitaire",
+    "4": "Portes",
+    "5": "Fenêtres",
+    "6": "Meubles",
+    "7": "Electricité",
+    "8": "Plomberie",
+    "9": "Produits d'incendie",
+    "10": "HVAC",
+    "11": "Menuiserie",
+    "12": "Electronique",
+    "13": "Construction",
+    "14": "Revêtement de sol",
+    "15": "Rampes et clôtures",
+    "16": "Eléments de construction et modules",
+    "17": "Circulation",
+    "18": "Equipement médical et de recherche",
+    "19": "Mobilier d'extérieur",
+    "20": "Plantation",
+    "21": "Signalisation",
+    "22": "Déchets et recyclage",
+    "23": "",
+    "24": ""
+  },
+  "word-carasoul": {
+    "1": "CONTRACTANTS",
+    "2": "INGÉNIEURS",
+    "3": "ARCHITECTES",
+    "4": "",
+    "5": "",
+    "6": ""
+  },
+  "widget": {
+    "1": "Il semble que nous ne trouvions pas ce que vous cherchez.",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": "",
+    "6": ""
+  }
+}

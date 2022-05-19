@@ -1,0 +1,136 @@
+.navbar-component {
+  background-color: #fff;
+
+  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 16%);
+  padding: 5px 25px 5px 25px;
+
+  position: fixed;
+  z-index: 2;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1366px;
+    margin: auto;
+
+    transition: all 0.3s ease-in-out;
+    min-height: 80px;
+
+    .logo {
+      transition: all 0.3s ease-in-out;
+      width: 160px;
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    .profile,
+    .search {
+      border-radius: 3px;
+      border: 1px solid #313133;
+
+      width: 50px;
+      height: 50px;
+
+      font-size: 26px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #313133;
+      fill: #313133;
+
+      cursor: pointer;
+
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: #feb449;
+        fill: #feb449;
+        border-color: #feb449;
+      }
+    }
+  }
+}
+
+.navbar-component-scroll {
+  .main-container {
+    transition: all 0.3s ease-in-out;
+    min-height: 70px;
+
+    .logo {
+      transition: all 0.3s ease-in-out;
+      width: 128px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-component {
+    padding: 5px 20px;
+
+    .main-container {
+      min-height: 60px;
+
+      .logo {
+        width: 150px;
+      }
+
+      .profile,
+      .search {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .navbar-component-scroll {
+    .main-container {
+      min-height: 50px;
+
+      .logo {
+        width: 110px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar-component {
+    padding: 0px 10px;
+
+    .main-container {
+      min-height: 50px;
+
+      .logo {
+        width: 100px;
+      }
+
+      .profile,
+      .search {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .navbar-component-scroll {
+    .main-container {
+      min-height: 40px;
+
+      .logo {
+        width: 80px;
+      }
+    }
+  }
+}

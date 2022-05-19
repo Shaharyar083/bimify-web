@@ -1,0 +1,319 @@
+.blog-page {
+  overflow: hidden;
+  .blog_hero {
+    background: #eceeef;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 90px;
+  }
+  .blog_main {
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 5% 4%;
+  }
+  .blog_divider {
+    width: 100%;
+    display: flex;
+  }
+  .blog_text {
+    width: 50%;
+    text-align: left;
+  }
+  .picture {
+    margin-bottom: 20px;
+  }
+  .logo_pic {
+    width: 47%;
+  }
+  .text {
+    margin-top: 8%;
+    max-width: 70%;
+  }
+  .text_para {
+    color: #212121;
+    font-family: "Work Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+  }
+  .blog_pic {
+    width: 50%;
+    height: 85vh;
+  }
+  .tower {
+    width: 100%;
+    // background-image: url('../../assets/blog\ images/pic.svg');
+  }
+  .tower_pic {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  // collection css
+  .collection_name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4% 0;
+  }
+  .cls-1,
+  .cls-2.cls-3 {
+    fill: white;
+  }
+  .circle {
+    fill: #fcb349;
+    width: 28px;
+  }
+  .logo_name {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    width: max-content;
+  }
+  .bimroom_collection {
+    font-family: "Work Sans", Sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 16px;
+    letter-spacing: 0px;
+    padding-left: 13px;
+    margin-bottom: 0px;
+  }
+
+  .line-wrap {
+    width: 60%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .line {
+    height: 1px;
+    background-color: #212121;
+  }
+  .collection_hero {
+    width: 100vw;
+  }
+  .plug_hero {
+    width: 100vw;
+  }
+  .collection_main {
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 5% 4% 0%;
+  }
+  .plug_main {
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 5% 4%;
+  }
+  .collection_divider {
+    width: 100%;
+    display: flex;
+  }
+  .plugin_divider {
+    width: 100%;
+    display: flex;
+  }
+  .collection_text {
+    width: 45%;
+    text-align: left;
+  }
+  .plug_text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .text1 {
+    max-width: 100%;
+    padding-left: 5%;
+  }
+  .text2 {
+    max-width: 80%;
+  }
+  .collection_para {
+    color: #212121;
+    font-family: "Work Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+  }
+  .collection_data {
+    width: 70%;
+    // height: 65vh;
+  }
+  .plug_data {
+    width: 50%;
+    // height: 85vh;
+  }
+  .collectionpic_main {
+    width: 100%;
+    // background-image: url('../../assets/blog\ images/pic.svg');
+  }
+  .plugpic_main {
+    width: 100%;
+    // background-image: url('../../assets/blog\ images/pic.svg');
+  }
+  .plug_main {
+    width: 100%;
+    // background-image: url('../../assets/blog\ images/pic.svg');
+  }
+  .collection_pic {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .plug_pic {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .blog-page {
+    .blog_text {
+      width: 60%;
+      text-align: left;
+    }
+    .blog_pic {
+      width: 40%;
+      height: 85vh;
+    }
+
+    .text {
+      max-width: 90%;
+    }
+    .collection_divider {
+      display: flex;
+      flex-direction: column;
+    }
+    .plugin_divider {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .collection_text {
+      width: 100%;
+    }
+    .plug_text {
+      width: 100%;
+    }
+    .collection_data {
+      width: 100%;
+      height: auto;
+    }
+    .plug_data {
+      width: 100%;
+      height: auto;
+    }
+    .collection_hero {
+      height: auto;
+      margin-top: 70px;
+    }
+    .collection_main {
+      height: auto;
+    }
+    .plug_main {
+      height: auto;
+    }
+    .text1 {
+      padding-left: 0%;
+      max-width: 560px;
+      margin-top: 4%;
+    }
+    .text2 {
+      padding-left: 0%;
+      max-width: 560px;
+      margin-top: 4%;
+    }
+    .logo_name {
+      width: 70%;
+    }
+    .line {
+      width: 30%;
+    }
+    .bimroom_collection {
+      font-size: 3.5vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-page {
+    .blog_divider {
+      display: flex;
+      flex-direction: column;
+    }
+    .line-wrap {
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .text,
+    .text2,
+    .text1 {
+      max-width: 100%;
+    }
+    .blog_text {
+      width: 100%;
+    }
+    .blog_pic {
+      width: 100%;
+    }
+    .blog_hero {
+      height: auto;
+      margin-top: 70px;
+    }
+    .blog_main {
+      height: auto;
+      padding-top: 15%;
+    }
+    .collection_name {
+      display: flex;
+      align-items: flex-start;
+
+      flex-direction: column;
+    }
+    .line {
+      width: 100%;
+      margin: 15px 0;
+    }
+    .bimroom_collection {
+      font-size: 18px;
+    }
+    .logo_name {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-page {
+    .text1 {
+      width: 100%;
+    }
+    .text2 {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .blog-page {
+    .blog_hero {
+      margin-top: 50px;
+    }
+  }
+}

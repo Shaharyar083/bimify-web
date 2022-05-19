@@ -1,0 +1,263 @@
+{
+  "home-heading": {
+    "1": "BIM LIBRARY FOR"
+  },
+  "home-para": {
+    "1": "Bimroom is a premium BIM object library to supply your project with the best digital products available. Our content is exclusively composed of fully parametric, carefully curated BIM objects which make it easy to bring your vision to life. Bimroom objects meet strict quality criteria and possess the features to ensure smoothmodeling across the entire lifecycle of your project."
+  },
+  "home-button": {
+    "1": "Browse the library"
+  },
+  "search": {
+    "1": "Search library"
+  },
+  "search-input": {
+    "1": "Search by product name, category, brand..."
+  },
+  "search-button": {
+    "1": "Show all products"
+  },
+  "categories": {
+    "1": "Categories",
+    "2": "Show all products"
+  },
+  "brands": {
+    "1": "Brands"
+  },
+  "footer": {
+    "1": "Bimroom is a premium BIM object library to supply your project with the best digital products available. Our content is exclusively composed of fully parametric, carefully curated BIM objects which make it easy to bring your vision to life. Bimroom objects meet strict quality criteria and possess the features to ensure smooth modeling across the entire lifecycle of your project.",
+    "2": "Overview",
+    "3": "Bimroom Collection",
+    "4": "Plugin",
+    "5": "Tutorials",
+    "6": "MANUFACTURERS",
+    "7": "Why Bimroom",
+    "8": "Custome features",
+    "9": "Training",
+    "10": "Testimonials",
+    "13": "About us",
+    "14": "Solutions",
+    "15": "Sustainability",
+    "16": "Interaction",
+    "17": "Feedback",
+    "18": "Support",
+    "19": "Contact Us",
+    "20": "Blog",
+    "21": "© 2021 All rights reserved"
+  },
+  "product": {
+    "1": "Back",
+    "2": "Render",
+    "3": "Product",
+    "4": "CATALOG VIEW SETTINGS",
+    "5": "THUMBNAILS",
+    "6": "SEARCH AND FILTER PRODUCTS",
+    "7": "Brand",
+    "8": "Select",
+    "9": "Bimroom Collection (23)",
+    "10": "Category",
+    "11": "Default sorting",
+    "12": "Sort by popularity",
+    "13": "Sort by average rating",
+    "14": "Sort by latest",
+    "15": "Showing 1–20 of 23 results",
+    "16": "Doors (12)",
+    "17": "Folding Doors (1)",
+    "18": "Roll-up & Sectional Doors (1)",
+    "19": "Sliding Doors (2)",
+    "20": "Swing Doors (6)",
+    "21": "Furniture (2)",
+    "22": "Acoustics (1)",
+    "23": "Armchairs & Recliners (1)",
+    "24": "Sanitary (1)",
+    "25": "Toilets (1)",
+    "26": "Windows (8)",
+    "27": "Hinged Windows (5)",
+    "28": "Hung Windows (2)",
+    "29": "Sliding Windows (1)",
+    "30": "Door – Double Leaf Metal Profile",
+    "31": "Download",
+    "32": "Reset all filters"
+  },
+  "catalog": {
+    "1": "Back",
+    "2": "CATALOG",
+    "3": "FURNITURE",
+    "4": "ARMCHAIRS & RECLINERS",
+    "5": "Armchair",
+    "6": "DESCRIPTION",
+    "7": "Objects in the Bimroom Collection are high quality generic BIM objects intended to be used in conceptual design, or as placeholders in early stages of a design project when no suppliers have yet been chosen.",
+    "8": "The parametric dimensions and behavior of Bimroom Collection objects makes them adaptable for the demands of most architectural design projects. The first priority is for them to be user-friendly, with predictable parametrics and adequate levels of detail to match the requirements of the project and to maintain a reasonable file size.",
+    "9": "Bimroom Collection items are schedulable and contain appropriate graphical representations for all kinds of drawings and documentation. Their most detailed 3D representations include geometry and materials that are ready for high quality still renders, animations or real-time walkthroughs to bring the project to life in a quick and easy way.",
+    "10": "There are no reviews yet.",
+    "11": "REVIEWS",
+    "12": "Leave A REVIEW",
+    "13": "Your rating",
+    "14": "Your review",
+    "15": "Submit",
+
+    "16": "Download Object",
+    "17": "RENDER",
+    "18": "3D VIEWER",
+
+    "19": "PRODUCT IMAGES",
+    "20": "PRODUCT INFORMATION",
+    "21": "CLASSIFICATION",
+
+    "22": "AVAILABILITY"
+  },
+  "Account": {
+    "1": "No downloads available yet.",
+
+    "2": "Browse products",
+    "3": "The following addresses will be used on the checkout page by default.",
+    "4": "Billing address",
+    "5": "Shipping address",
+
+    "6": "You have not set up this type of address yet.",
+    "7": "First Name",
+    "8": "Last name",
+
+    "9": "Company name (optional)",
+    "10": "Country/Region",
+    "11": "Select a country / region...",
+
+    "12": "Street address",
+    "13": "Apartment, suite, unit, etc. (optional)",
+    "14": "Postcode / ZIP",
+
+    "15": "Town / City",
+    "16": "Canton (optional)",
+    "17": "Select an option...",
+
+    "18": "Phone",
+    "19": "Email address",
+    "20": "Save address",
+
+    "21": "House number and street name",
+    "22": "First name",
+    "23": "Last name",
+    "24": "Display name",
+    "25": "This will be how your name will be displayed in the account section and in reviews",
+    "26": "Email address",
+    "27": "Password change",
+    "28": "Current password (leave blank to leave unchanged)",
+    "29": "New password (leave blank to leave unchanged)",
+    "30": "Confirm new password",
+    "31": "Save changes",
+    "32": "NAME",
+    "33": "EMAIL",
+    "34": "ORGANIZATION",
+    "35": "ROLE",
+    "36": "Account",
+    "37": "Addresses",
+    "38": "Downloads",
+    "39": "Comments",
+    "40": "Sign Out",
+    "41": "Hello",
+    "42": "not",
+    "43": "Log out",
+    "44": "From your account dashboard you can view your",
+    "45": "recent orders",
+    "46": "manage your",
+    "47": "shipping and billing addresses",
+    "48": "and",
+    "49": "edit your password and account details"
+  },
+  "wishlist": {
+    "1": "YOUR WISHLIST",
+    "2": "No products added to the wishlist",
+    "3": "Acoustic Panel",
+    "4": "Armchair",
+    "5": "Downloads",
+    "6": ""
+  },
+  "modal": {
+    "1": "BIM OBJECTS",
+    "2": "Acoustic Panel",
+    "3": "More information and downloadable material on the product page",
+    "4": "",
+    "5": ""
+  },
+
+  "blog": {
+    "1": "Bimroom is the premium source of high-quality BIM content for construction design professionals. Our aim is to shift the focus of building information modeling from software development and coordination back to the design. We focus exclusively on thoroughly tried and tested BIM native objects to induce tangible benefit into your workflow.",
+    "2": "All Bimroom content, whether modeled by us or provided by the manufacturer, is confirmed to have functioning parametric geometry with appropriate detail, comprehensible parametrics and a reasonable file size. Furthermore, the objects are accompanied by all of the relevant information on features, performance and sustainability.",
+    "3": "No more hours spent searching and downloading objects and revising them!",
+    "4": "Bimroom Collection is an assortment of generic high-quality BIM objects to use as placeholders before specifying products, or if no BIM content is readily available of the desired product. Bimroom Collection makes it easy to kick off your BIM project using native content that is easy to replace with specified products later on.",
+    "5": "The geometries and materials of Bimroom Collection objects are carefully designed to support your modeling efforts in all levels of detail and all kinds of documentation from 2D sketches and blueprints to high-quality 3D stills, animations and VR.",
+    "6": "Available as a part of Bimroom Premium on Q2 2022 – Check back for updates!",
+    "7": "Bimroom can be accessed online or directly in your favourite BIM application. Our software plugins offer seamless access to all Bimroom content and allow you to simply drag and drop objects into your project. Moreover, you can create, manage and share your personal custom libraries to create lists of favourites or to manage product libraries specific to your projects.",
+    "8": "More features to further facilitate your BIM efforts and improve your team’s productivity are in the pipeline – Stay tuned!",
+    "9": "Available as a part of Bimroom Premium on Q2 2022.",
+    "10": "",
+    "11": ""
+  },
+  "product-brand-c": {
+    "1": "Default sorting",
+    "2": "Sort by popularity",
+    "3": "Sort by average rating",
+    "4": "Sort by latest",
+    "5": "Showing all 23 results",
+    "6": "Bimroom Collection"
+  },
+  "sidebar": {
+    "1": "FAVORITES",
+    "2": "LOGOUT",
+    "3": "ABOUT BIMROOM",
+    "4": "CONTACT US",
+    "5": "BIMFORM AG",
+    "6": "SUSTAINABILITY",
+    "7": "LOGIN"
+  },
+  "topnavbar": {
+    "1": "search",
+    "2": "Search BIM content",
+    "3": "OR GO TO CATEGORY",
+    "4": "",
+    "5": "",
+    "6": ""
+  },
+  "categoryproduct": {
+    "1": "Kitchen",
+    "2": "Lighting",
+    "3": "Sanitary",
+    "4": "Doors",
+    "5": "Windows",
+    "6": "Furniture",
+    "7": "Electrical",
+    "8": "Plumbing",
+    "9": "Fire Products",
+    "10": "HVAC",
+    "11": "Casework",
+    "12": "Electronics",
+    "13": "Construction",
+    "14": "Flooring",
+    "15": "Railing & Fences",
+    "16": "Building Elements & Modules",
+    "17": "Circulation",
+    "18": "Medical & Research Equipment",
+    "19": "Outdoor Furniture",
+    "20": "Planting",
+    "21": "Signage",
+    "22": "WasteRecycling",
+    "23": "",
+    "24": ""
+  },
+  "word-carasoul": {
+    "1": "CONTRACTORS",
+    "2": "ENGINEERS",
+    "3": "ARCHITECTS",
+    "4": "",
+    "5": "",
+    "6": ""
+  },
+  "widget": {
+    "1": " It seems we can't find what you're looking for.",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": "",
+    "6": ""
+  }
+}
