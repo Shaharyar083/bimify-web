@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/Home/HeroSection";
-import SearchSection from "../components/Home/SearchSection";
-import Footer from "../components/Footer";
 import TagManager from "react-gtm-module";
 
+// components
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/Home/HeroSection";
+import CategorySection from "../components/Home/CategorySection/CategorySection";
+import ManufactureSection from "../components/Home/ManufactureSection/ManufactureSection";
+import Footer from "../components/Footer";
+
 const Home = () => {
-  useEffect(async () => {
+  useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
         event: "pageview",
@@ -19,7 +22,8 @@ const Home = () => {
     <>
       <Navbar />
       <HeroSection />
-      <SearchSection />
+      <CategorySection />
+      <ManufactureSection />
       <Footer />
     </>
   );

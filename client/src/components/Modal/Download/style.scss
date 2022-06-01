@@ -1,0 +1,287 @@
+.download-modal-component {
+    .modal-dialog {
+        max-width: 1000px;
+        margin-top: 10vh;
+    }
+
+    .close-modal {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 20px;
+
+        .icon {
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+
+    .main-wrapper {
+        padding: 0px 40px 40px;
+        color: #000;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #000000;
+
+            .title {
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 19px;
+                text-transform: capitalize;
+                padding-right: 20px;
+            }
+
+            .brand {
+                img {
+                    width: 130px;
+                }
+            }
+        }
+
+        .download-text {
+            margin-top: 17px;
+            font-family: "Poppins";
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+
+        .download-table {
+            margin-top: 10px;
+            border: 1px solid rgba(196, 196, 196, 0.2);
+            box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.25));
+            border-radius: 5px;
+            padding: 5px 20px;
+
+            table {
+                width: 100%;
+            }
+
+            tr {
+                border-bottom: solid 1px #DDDDDD50;
+            }
+
+            tr:last-child {
+                border-bottom: none;
+            }
+
+            .td1 {
+                padding: 15px 0;
+                width: 13%;
+
+                img {
+                    width: 40px;
+                }
+            }
+
+            .td2 {
+                padding: 15px;
+                width: 60%;
+                word-break: break-all;
+                font-family: "Poppins";
+                font-weight: 500;
+                font-size: 14px;
+                text-transform: capitalize;
+            }
+
+            .td3 {
+                padding: 15px 0;
+                width: 22%;
+
+
+
+                .download {
+                    margin-left: auto;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    border: 1px solid #313131;
+                    background: #423e3f !important;
+
+                    width: 120px;
+                    height: 35px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    color: #fff;
+                    transition: all 0.2s ease-in-out;
+
+                    .icon {
+                        font-size: 15px;
+                        margin-bottom: 3px;
+                    }
+
+                    span {
+                        font-family: "Poppins";
+                        font-weight: 400;
+                        font-size: 12px;
+                        margin-left: 10px;
+                    }
+
+                    &:hover {
+                        background: #feb449 !important;
+                        border-color: #feb449 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .download-modal-component {
+        .modal-dialog {
+            margin: 10vh 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .download-modal-component {
+        .close-modal {
+            padding: 10px;
+        }
+
+        .main-wrapper {
+            padding: 0px 15px 30px;
+
+            .header {
+                align-items: flex-start;
+                flex-direction: column;
+
+                .title {
+                    font-size: 16px;
+                }
+
+                .brand {
+                    margin-left: auto;
+
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+
+            .download-text {
+                margin-top: 15px;
+                font-size: 12px;
+            }
+
+            .download-table {
+                margin-top: 8px;
+                padding: 5px 10px;
+
+                .td1 {
+                    padding: 12px 0;
+
+                    img {
+                        width: 35px;
+                        object-fit: contain;
+                    }
+                }
+
+                .td2 {
+                    padding: 12px;
+                    font-size: 12px;
+                }
+
+                .td3 {
+                    padding: 12px 0;
+                    width: 22%;
+
+                    .download {
+                        width: 105px;
+                        height: 30px;
+
+                        .icon {
+                            font-size: 14px;
+                        }
+
+                        span {
+                            font-size: 11px;
+                            margin-left: 7px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .download-modal-component {
+        .close-modal {
+            padding: 10px;
+        }
+
+        .main-wrapper {
+            padding: 0px 15px 30px;
+
+            .header {
+                align-items: flex-start;
+                flex-direction: column;
+
+                .title {
+                    font-size: 16px;
+                }
+
+                .brand {
+                    margin-left: auto;
+
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+
+            .download-text {
+                margin-top: 15px;
+                font-size: 12px;
+            }
+
+            .download-table {
+                margin-top: 8px;
+                padding: 5px 10px;
+
+                .td1 {
+                    padding: 12px 0;
+
+                    img {
+                        width: 35px;
+                        object-fit: contain;
+                    }
+                }
+
+                .td2 {
+                    padding: 12px;
+                    font-size: 12px;
+                }
+
+                .td3 {
+                    padding: 12px 0;
+                    width: 22%;
+
+                    .download {
+                        width: 105px;
+                        height: 30px;
+
+                        .icon {
+                            font-size: 14px;
+                        }
+
+                        span {
+                            font-size: 11px;
+                            margin-left: 7px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

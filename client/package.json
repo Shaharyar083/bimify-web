@@ -39,6 +39,7 @@
     "react-switch": "^6.0.0",
     "sass": "^1.49.8",
     "search-insights": "^2.2.1",
+    "slick-carousel": "^1.8.1",
     "three": "^0.138.3",
     "web-vitals": "^2.1.4"
   },

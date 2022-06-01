@@ -1,15 +1,17 @@
 .navbar-component {
   background-color: #fff;
 
-  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 16%);
+  // box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 16%);
   padding: 5px 25px 5px 25px;
-
-  position: fixed;
+  position: relative;
   z-index: 2;
 
-  top: 0;
-  left: 0;
-  right: 0;
+  // position: fixed;
+  // z-index: 2;
+
+  // top: 0;
+  // left: 0;
+  // right: 0;
 
   .main-container {
     display: flex;
@@ -25,37 +27,241 @@
     .logo {
       transition: all 0.3s ease-in-out;
       width: 160px;
+
       img {
         max-width: 100%;
         width: 100%;
       }
     }
 
-    .profile,
-    .search {
-      border-radius: 3px;
-      border: 1px solid #313133;
-
-      width: 50px;
-      height: 50px;
-
-      font-size: 26px;
-
+    .center {
       display: flex;
-      justify-content: center;
+      align-items: center;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+
+      .categories {
+        height: 40px;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .text {
+          font-family: 'Poppins', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          color: #313131;
+        }
+
+        .down-icon {
+          width: 12px;
+          margin-left: 7px;
+        }
+
+        .drop-down-open {
+          position: absolute;
+          top: 40px;
+          left: 0;
+
+          background-color: #fff;
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+          border-radius: 15px;
+
+          padding: 20px;
+
+          transition: all 0.1s ease;
+
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 20px;
+          row-gap: 10px;
+
+          .menu-link {
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 7px 10px;
+            display: flex;
+            align-items: center;
+            transition: all 0.1s ease;
+
+            img {
+              width: 40px;
+            }
+
+            .label {
+              margin-left: 10px;
+              font-family: 'Poppins', sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              color: #313131;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              max-width: 110px;
+            }
+
+            &:hover {
+              background-color: rgba(247, 168, 40, 0.8);
+            }
+          }
+        }
+
+        .drop-down-close {
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+
+      .search-filter {
+        display: flex;
+        justify-content: center;
+
+        input {
+          width: 300px;
+          background: transparent;
+          outline: none;
+          border: none;
+          font-family: "Poppins", Sans-serif;
+          font-size: 15px;
+          font-weight: 400;
+          color: #a8a8a9;
+          padding: 0.7em;
+        }
+
+        .icon {
+          border-radius: 0 5px 5px 0;
+          cursor: pointer;
+          width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          color: #fff;
+          background-color: #feb449;
+          border-color: #feb449;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
       align-items: center;
 
-      color: #313133;
-      fill: #313133;
+      .projects-wrapper {
+        height: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
 
-      cursor: pointer;
+        .text {
+          font-family: 'Poppins', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          color: #313131;
+        }
 
-      transition: 0.2s ease-in-out;
+      }
 
-      &:hover {
-        color: #feb449;
-        fill: #feb449;
-        border-color: #feb449;
+      .login {
+        cursor: pointer;
+        margin-left: 40px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #313131;
+      }
+
+      .profile-wrapper {
+        height: 40px;
+        margin-left: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .profile {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid #313131;
+          padding: 1px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #313131;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .down-icon {
+        width: 12px;
+        margin-left: 7px;
+      }
+
+      .drop-down-open {
+        position: absolute;
+        top: 50px;
+        right: 0;
+
+        background-color: #fff;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        padding: 5px 0;
+
+        transition: all 0.1s ease;
+
+        .menu-link {
+          margin: 0 10px;
+          padding: 7px 10px;
+          display: flex;
+          align-items: center;
+          transition: all 0.1s ease;
+
+          img {
+            width: 15px;
+          }
+
+          .label {
+            margin-left: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            color: #313131;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 110px;
+          }
+
+          &:hover {
+            border-radius: 10px;
+            background-color: rgba(247, 168, 40, 0.8);
+          }
+        }
+      }
+
+      .drop-down-close {
+        width: 0;
+        height: 0;
+        overflow: hidden;
       }
     }
   }
@@ -65,30 +271,89 @@
   .main-container {
     transition: all 0.3s ease-in-out;
     min-height: 70px;
-
-    .logo {
-      transition: all 0.3s ease-in-out;
-      width: 128px;
-    }
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .navbar-component {
     padding: 5px 20px;
 
+    .main-container {
+      min-height: 70px;
+
+      .center {
+        display: none;
+      }
+    }
+  }
+
+  .navbar-component-scroll {
     .main-container {
       min-height: 60px;
 
       .logo {
         width: 150px;
       }
+    }
+  }
+}
 
-      .profile,
-      .search {
-        width: 40px;
-        height: 40px;
-        font-size: 22px;
+@media screen and (max-width: 767px) {
+  .navbar-component {
+    .main-container {
+      min-height: 60px;
+
+      .logo {
+        width: 140px;
+      }
+
+      .right {
+        .projects-wrapper {
+          .text {
+            font-size: 14px;
+          }
+        }
+
+        .profile-wrapper {
+          margin-left: 25px;
+
+          .profile {
+            width: 40px;
+            height: 40px;
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .down-icon {
+          width: 10px;
+        }
+
+        .drop-down-open {
+
+
+          .menu-link {
+            margin: 0 10px;
+            padding: 7px 10px;
+            display: flex;
+            align-items: center;
+            transition: all 0.1s ease;
+
+            img {
+              width: 15px;
+            }
+
+            .label {
+              font-size: 12px;
+              max-width: 100px;
+            }
+          }
+        }
       }
     }
   }
@@ -104,32 +369,18 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 575px) {
   .navbar-component {
     padding: 0px 10px;
 
     .main-container {
-      min-height: 50px;
 
       .logo {
-        width: 100px;
+        width: 120px;
       }
 
-      .profile,
-      .search {
-        width: 30px;
-        height: 30px;
-        font-size: 18px;
-      }
-    }
-  }
-
-  .navbar-component-scroll {
-    .main-container {
-      min-height: 40px;
-
-      .logo {
-        width: 80px;
+      .right {
+        display: none;
       }
     }
   }

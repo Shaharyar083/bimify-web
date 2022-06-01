@@ -1,7 +1,7 @@
 .catalog-page {
   max-width: 1366px;
   margin: auto;
-  margin-top: 90px;
+  // margin-top: 90px;
 
   .top-back-wrapper {
     display: flex;
@@ -761,7 +761,7 @@
 
 @media screen and (max-width: 767px) {
   .catalog-page {
-    margin-top: 70px;
+    // margin-top: 70px;
 
     .top-back-wrapper {
       flex-direction: column;
@@ -925,7 +925,7 @@
 
 @media screen and (max-width: 400px) {
   .catalog-page {
-    margin-top: 50px;
+    // margin-top: 50px;
 
     .product-view-desc-section {
       .product-view {
