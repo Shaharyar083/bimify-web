@@ -5,6 +5,7 @@ import TagManager from "react-gtm-module";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/Home/HeroSection";
 import CategorySection from "../components/Home/CategorySection/CategorySection";
+import FeaturedObjects from "../components/Home/FeaturedObjects/FeaturedObjects";
 import ManufactureSection from "../components/Home/ManufactureSection/ManufactureSection";
 import Footer from "../components/Footer";
 
@@ -23,6 +24,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <CategorySection />
+      <FeaturedObjects />
       <ManufactureSection />
       <Footer />
     </>

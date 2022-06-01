@@ -40,3 +40,35 @@
         }
     }
 }
+
+@media screen and (max-width:991px) {
+    .load-more-component {
+        margin: 20px 0 40px;
+        display: flex;
+        align-items: center;
+
+
+
+        .show-more {
+            margin: 0 10px;
+
+
+            .text {
+
+                font-size: 14px;
+
+            }
+
+            .down-icon {
+                margin-left: 10px;
+
+            }
+
+            .up-icon {
+                margin-left: 10px;
+
+            }
+
+        }
+    }
+}

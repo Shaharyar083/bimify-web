@@ -1,0 +1,326 @@
+.home-featured-section {
+    max-width: 1339px;
+    margin: auto;
+
+    .main-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: lowercase;
+        text-align: center;
+        color: #313133;
+        text-transform: uppercase;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .main-wrapper {
+        margin-bottom: 50px;
+        display: flex;
+        gap: 25px;
+
+        .left {
+            width: 50%;
+            background: #fff;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+
+            .feature1 {
+                position: relative;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                padding: 25px;
+
+                .brand {
+                    width: 250px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .items {
+                    margin-top: 15px;
+                    font-family: "Poppins";
+                    font-weight: 400;
+                    font-size: 17px;
+                    color: #313133;
+                }
+
+                .p_image {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        max-width: 100%;
+                        width: 60%;
+                    }
+                }
+
+                .view {
+                    position: absolute;
+                    left: 20px;
+                    bottom: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    margin-top: 15px;
+                    cursor: pointer;
+
+                    .text {
+                        font-family: "Poppins";
+                        font-weight: 400;
+                        font-size: 13px;
+                        color: #313133;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .feature2 {
+                background: #fff;
+                box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+
+                display: flex;
+
+                .f2-left {
+                    padding: 25px 0 25px 20px;
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .title {
+                        font-family: "Poppins";
+                        font-weight: 400;
+                        font-size: 40px;
+                        line-height: 50px;
+                        color: #313133;
+                    }
+
+                    .view {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 15px;
+                        cursor: pointer;
+
+                        .text {
+                            font-family: "Poppins";
+                            font-weight: 400;
+                            font-size: 13px;
+                            color: #313133;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+
+                .f2-right {
+                    padding-top: 20px;
+                    width: 50%;
+
+                    img {
+                        max-width: 70%;
+                        margin-left: -20px;
+                    }
+                }
+            }
+
+            .sub-feature {
+                display: flex;
+                gap: 25px;
+
+                .feature3,
+                .feature4 {
+                    width: 50%;
+
+                    background: #fff;
+                    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+                    border-radius: 5px;
+
+                    display: flex;
+
+                    flex-direction: column;
+
+                    padding: 25px;
+
+                    .title {
+                        font-family: "Poppins";
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: #313133;
+                    }
+
+                    .items {
+                        margin-top: 5px;
+                        font-family: "Poppins";
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #313133;
+                    }
+
+                    .p_image {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 178px;
+
+                        img {
+                            max-width: 50%;
+                            width: 100%;
+                        }
+                    }
+
+                    .view {
+                        display: flex;
+                        align-items: center;
+
+                        margin-top: 15px;
+                        cursor: pointer;
+
+                        .text {
+                            font-family: "Poppins";
+                            font-weight: 400;
+                            font-size: 13px;
+                            color: #313133;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1360px) {
+    .home-featured-section {
+        max-width: 100%;
+        padding: 0px 25px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .home-featured-section {
+        padding: 0px 20px;
+
+        .main-title {
+            font-size: 24px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .home-featured-section {
+        padding: 0px 10px;
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .left {
+                width: 100%;
+
+                .feature1 {
+
+                    .brand {
+                        width: 100%;
+                    }
+
+                    .items {
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+
+                    .p_image {
+                        padding: 10px 0;
+
+                        img {
+                            max-width: 90%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                gap: 20px;
+
+                .feature2 {
+                    flex-direction: column-reverse;
+
+                    .f2-left {
+                        padding: 20px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .title {
+                            font-size: 30px;
+                            line-height: 40px;
+                            color: #313133;
+                        }
+
+
+                    }
+
+                    .f2-right {
+                        padding-top: 10px;
+                        width: 100%;
+
+                        img {
+                            max-width: 70%;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+
+                .sub-feature {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .feature3,
+                    .feature4 {
+                        width: 100%;
+
+                        .p_image {
+                            height: unset;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

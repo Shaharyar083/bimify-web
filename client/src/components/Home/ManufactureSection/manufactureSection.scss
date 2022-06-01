@@ -24,3 +24,24 @@
         }
     }
 }
+
+@media screen and (max-width:991px) {
+    .home-manufacture-section {
+        padding: 0px 20px;
+
+        .main-title {
+            font-size: 24px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+
+@media screen and (max-width:575px) {
+    .home-manufacture-section {
+        padding: 0px 10px;
+
+
+    }
+}
