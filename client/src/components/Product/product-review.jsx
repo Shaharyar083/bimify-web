@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { FaRegStar } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
 import { useMsal } from "@azure/msal-react";
@@ -11,29 +11,6 @@ import { Grid } from "@material-ui/core";
 import Line32 from "../../assets/images/other/Line32.png";
 import { Line } from "rc-progress";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
-const reviews = [
-  {
-    rating: 99,
-    star: 5,
-  },
-  {
-    rating: 17,
-    star: 4,
-  },
-  {
-    rating: 5,
-    star: 3,
-  },
-  {
-    rating: 3,
-    star: 2,
-  },
-  {
-    rating: 0,
-    star: 1,
-  },
-];
 
 const MessageBox = () => {
   const { t, i18n } = useTranslation();
@@ -89,24 +66,42 @@ const ProductReview = ({ productID }) => {
   };
 
   const submit = async () => {
-    let payload = {
-      email: accounts[0]?.username,
-      productID,
-      rating: starActive,
-      review,
-    };
+    if (accounts[0]) {
+      let payload = {
+        email: accounts[0]?.username,
+        productID,
+        rating: starActive,
+        review,
+      };
 
-    try {
-      setIsLoading(true);
-      await addReviewAndRating(payload);
-      const response = await getReviewAndRating();
-      dispatch(setRatingAndReview(response.data));
-      setIsLoading(false);
-      reset();
-    } catch (err) {
-      setIsLoading(false);
-      console.log("product-review component api error =>", err.message);
+      try {
+        setIsLoading(true);
+        await addReviewAndRating(payload);
+        const response = await getReviewAndRating();
+        dispatch(setRatingAndReview(response.data));
+        setIsLoading(false);
+        reset();
+      } catch (err) {
+        setIsLoading(false);
+        console.log("product-review component api error =>", err.message);
+      }
+    } else {
+      alert("Please login first");
     }
+  };
+
+  const productStats = useMemo(
+    () => p_rating_review?.find((id) => id.productID === `${productID}`),
+    [p_rating_review]
+  );
+
+  const reviewsCalculation = (star) => {
+    let temp =
+      productStats?.reviews?.filter((val) => val?.rating === star)?.length ?? 0;
+
+    let totalReviews = productStats?.reviews?.length ?? 100;
+
+    return Math.round((temp / totalReviews) * 100);
   };
 
   return (
@@ -125,25 +120,29 @@ const ProductReview = ({ productID }) => {
               <Grid item xs={12} sm={12} md={5} lg={5}>
                 <div className="reviews-show-container">
                   <div className="ratingicons">
-                    {[1, 2, 3, 4, 5].map((star, index) => (
-                      <AiFillStar className="icon active" key={star} />
-                    ))}
+                    {[1, 2, 3, 4, 5].map((star, index) =>
+                      star <= productStats?.rating ? (
+                        <AiFillStar className="icon active" key={index} />
+                      ) : (
+                        <FaRegStar className="icon " key={index} />
+                      )
+                    )}
                   </div>
                   <div className="ratingtext">
-                    <h1>5.0</h1>
-                    <p> ( 2,345 Reviews )</p>{" "}
+                    <h1>{productStats?.rating}</h1>
+                    <p>( {productStats?.reviews?.length} Reviews )</p>
                   </div>
                   <div className="progress-container">
-                    {reviews.map((e) => (
-                      <div className="progress-bars">
-                        <p>{e.star} Star</p>
+                    {[5, 4, 3, 2, 1].map((data) => (
+                      <div className="progress-bars" key={data}>
+                        <p>{data} Star</p>
                         <Line
-                          percent={e.rating}
+                          percent={reviewsCalculation(data)}
                           strokeWidth={1}
                           strokeColor="#FEB449"
                           className="line-progress"
                         />
-                        <p>{e.rating}%</p>
+                        <p>{reviewsCalculation(data)}%</p>
                       </div>
                     ))}
                   </div>
@@ -202,47 +201,41 @@ const ProductReview = ({ productID }) => {
           </>
           {/* )} */}
           {/* SHOW RATING AND REVIEW LIST SECTION */}
-          <div
-            className="product-reivew"
-            style={{ width: accounts[0] ? "" : "100%" }}
-          >
-            {p_rating_review?.find((id) => id.productID === `${productID}`)
-              ?.reviews.length === 0 && (
+          <div className="product-reivew" style={{ width: "100%" }}>
+            {productStats?.reviews.length === 0 && (
               <div className="msg-box-wrapper">
                 <MessageBox />
               </div>
             )}
 
             <div className="review-list">
-              {p_rating_review
-                ?.find((id) => id.productID === `${productID}`)
-                ?.reviews?.map((data, i) => (
-                  <>
-                    <Review data={data} key={i} />
-                    
-                      {i === p_rating_review[0]?.reviews?.length - 1 ? (
+              {productStats?.reviews?.map((data, i) => (
+                <>
+                  <Review data={data} key={i} />
+
+                  {i === p_rating_review[0]?.reviews?.length - 1 ? (
                     <div className="linecontainer">
-                        <div className="view-more-line">
-                          <div>
-                            <img src={Line32} alt="" />
-                          </div>
-                          <p>View More</p>
-                          <span>
-                            {" "}
-                            <MdOutlineKeyboardArrowDown className="arrow-icon"/>
-                          </span>
-                          <div>
-                            <img src={Line32} alt="" />
-                          </div>
+                      <div className="view-more-line">
+                        <div>
+                          <img src={Line32} alt="" />
                         </div>
+                        <p>View More</p>
+                        <span>
+                          {" "}
+                          <MdOutlineKeyboardArrowDown className="arrow-icon" />
+                        </span>
+                        <div>
+                          <img src={Line32} alt="" />
+                        </div>
+                      </div>
                     </div>
-                      ) : (
-                        <div className="linecontainer">
-                        <img src={Line32} alt="" />
-                        </div>
-                      )}
-                  </>
-                ))}
+                  ) : (
+                    <div className="linecontainer">
+                      <img src={Line32} alt="" />
+                    </div>
+                  )}
+                </>
+              ))}
             </div>
           </div>
         </div>
