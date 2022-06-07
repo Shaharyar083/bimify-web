@@ -151,7 +151,7 @@ const ProductReview = ({ productID }) => {
               </Grid>
               <Grid item xs={12} sm={12} md={7} lg={7}>
                 <div className="leave-review">
-                  <div className="tab">{t("catalog.12")}</div>
+                  <div className="tab">Leave A Review</div>
 
                   <div className="wrap-container">
                     <div
@@ -219,8 +219,9 @@ const ProductReview = ({ productID }) => {
                 ?.reviews?.map((data, i) => (
                   <>
                     <Review data={data} key={i} />
+                    
+                      {i === p_rating_review[0]?.reviews?.length - 1 ? (
                     <div className="linecontainer">
-                      {i === reviews.length - 1 ? (
                         <div className="view-more-line">
                           <div>
                             <img src={Line32} alt="" />
@@ -234,10 +235,12 @@ const ProductReview = ({ productID }) => {
                             <img src={Line32} alt="" />
                           </div>
                         </div>
-                      ) : (
-                        <img src={Line32} alt="" />
-                      )}
                     </div>
+                      ) : (
+                        <div className="linecontainer">
+                        <img src={Line32} alt="" />
+                        </div>
+                      )}
                   </>
                 ))}
             </div>
