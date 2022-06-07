@@ -3,10 +3,10 @@ import "./productPage.scss";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Filter from "./filter";
-import Product from "./product";
+import Product from "./product";  
 
 import { useTranslation } from "react-i18next";
-
+  
 const ProductPage = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();

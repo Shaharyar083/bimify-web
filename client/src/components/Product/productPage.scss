@@ -111,7 +111,6 @@
           background: #f5f5f5;
           border-radius: 20px 20px 0 0;
 
-
           font-family: "Poppins", Sans-serif;
           font-size: 16px;
           font-weight: 400;
@@ -248,7 +247,6 @@
       width: 50%;
       overflow: hidden;
 
-
       .space {
         margin-top: 60px;
       }
@@ -272,7 +270,7 @@
       .para {
         padding: 0 44px;
 
-        font-family: 'Archivo', sans-serif;
+        font-family: "Archivo", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.42857143;
@@ -301,14 +299,12 @@
         align-items: center;
         justify-content: center;
 
-
         font-family: "Poppins", Sans-serif;
         font-size: 16px;
         font-weight: 400;
         text-transform: uppercase;
         text-decoration: none;
         color: #313133;
-
 
         line-height: 1;
         cursor: pointer;
@@ -323,10 +319,9 @@
 
     .tab-content {
       padding: 20px 10px;
-      border: 1px solid rgba(196, 196, 196, .25);
+      border: 1px solid rgba(196, 196, 196, 0.25);
       border-radius: 5px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-
 
       .table_title {
         font-family: "Poppins", Sans-serif;
@@ -346,54 +341,64 @@
       .table_heading {
         width: 45%;
       }
-
     }
   }
 
   .related-product-section {
-    margin: 10px 10px 10px;
+    margin-top: 70px;
+    .headercontainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    border-radius: 3px;
-    box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
-    border: 1px solid #d8d8d8;
+      .tab {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 52px;
+        text-transform: capitalize;
+        color: #313133;
+        text-decoration: none;
+        padding: 20px 25px;
+        line-height: 1;
+        cursor: pointer;
+        @media screen and (max-width: 430px) {
+          font-size: 26px;
+        }
+      }
 
-    .tab {
-      font-family: "Work Sans", Sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #feb449;
-      padding: 20px 25px;
-      line-height: 1;
-      cursor: pointer;
+      .sliderButton {
+        .backbutton {
+          font-size: 2em;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+        .forwardbutton {
+          cursor: pointer;
+          margin-left: 20px;
+          font-size: 2em;
+        }
+      }
     }
-
     .product-wrapper {
-      padding: 0 25px 20px;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      flex-wrap: wrap;
-      column-gap: 10px;
-      row-gap: 10px;
-
+      padding-bottom: 50px;
       .p_card {
-        border-radius: 5px;
         padding: 5px 10px 15px;
-        box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 25%);
-        background-color: #ffffff;
-        border: 1px solid #fff;
-        // margin-bottom: 25px;
-        width: 100%;
-        // margin-right: 20px;
+        background: #ffffff;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+        width: 320px !important;
+        height: 360px;
+        margin: 30px;
 
         .p_header {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-end;
           align-items: center;
+          padding: 10px 10px 0px 0px;
 
           .heart {
-            font-size: 0.9em;
+            font-size: 1.8em;
             color: #7a7a7a;
             cursor: pointer;
           }
@@ -410,18 +415,14 @@
           margin-top: 20px;
 
           .thumbnail {
-            width: 100%;
-            height: 160px;
-            padding: 0 10px;
-
             display: flex;
             justify-content: center;
             align-items: center;
 
             img {
-              max-width: 100%;
-              // width: 100%;
-              max-height: 100%;
+              width: 120px;
+              height: 220px;
+              object-fit: cover;
             }
           }
 
@@ -499,15 +500,25 @@
 
   .product-review-section {
     display: flex;
-
+    flex-direction: column;
+    padding: 30px 0px 20px 0px;
+    .rr-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 52px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #313133;
+      }
+    }
     .product-reivew {
       width: 65%;
-      margin: 10px 10px 30px;
-
-      border-radius: 3px;
-      box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
-      border: 1px solid #d8d8d8;
-
       .tab {
         font-family: "Work Sans", Sans-serif;
         font-size: 12px;
@@ -530,7 +541,6 @@
           color: #fff;
           border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
           padding: 1em 2em 1em 3.5em;
-
           font-family: "Work Sans", Sans-serif;
           font-size: 14px;
           font-weight: 500;
@@ -539,104 +549,128 @@
 
       .review-list {
         padding: 0 20px;
-
-        .wrap {
-          margin-bottom: 15px;
-          border-style: solid;
-          border-width: 1px 1px 1px 1px;
-          border-color: #D8D8D8;
-          border-radius: 10px !important;
-          padding: 0.9em 1.618em 0.3em;
-          background-color: #fcfcfc;
-
-          font-family: 'Roboto';
-          font-weight: 300;
-          color: #333333;
-          font-size: 14px;
-          line-height: 20px;
-
-
-          .head {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 14px;
-
-            .title {
-
-              font-style: italic;
-            }
-
-            .icon {
-              cursor: pointer;
-              font-size: 0.9em;
-              opacity: 0.25;
-              color: #6d6d6d;
-
-              margin-right: 1px;
-            }
-
-            .active {
-              color: #feb449;
-              opacity: 1;
-            }
-          }
-
-          .para {
-            margin-bottom: 10px;
-          }
-        }
-
-      }
-    }
-
-    .leave-review {
-      width: 35%;
-
-      margin: 10px 10px 30px;
-
-      border-radius: 3px;
-      box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
-      border: 1px solid #d8d8d8;
-
-      .tab {
-        font-family: "Work Sans", Sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #feb449;
-        padding: 20px 25px;
-        line-height: 1;
-        cursor: pointer;
-      }
-
-      .wrap-container {
-        padding: 0 20px 20px;
-
-        .sub-title {
-          margin-bottom: 5px;
-          font-family: "Roboto";
-          font-weight: 300;
-          font-size: 13px;
-          line-height: 1.42857143;
-          color: #333;
-
-          span {
-            color: #e2401c;
-          }
-        }
-
-        .star-wrapper {
+        .head {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          margin-bottom: 7px;
+          flex-wrap: wrap;
+          border-right: 1px solid rgba(201, 200, 200, 0.5);
+          margin-bottom: 60px;
+          padding: 30px;
+          @media screen and (max-width: 960px) {
+            border-right: unset;
+          }
+          .title {
+            font-family: SF;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            display: flex;
+            text-align: center;
+            color: #3d3d3d;
+            @media screen and (max-width: 960px) {
+              font-weight: 400;
+              font-size: 16px;
+            }
+          }
 
           .icon {
+            filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+            margin-top: 10px;
             cursor: pointer;
             font-size: 0.9em;
             opacity: 0.25;
             color: #6d6d6d;
+            margin-right: 5px;
+            width: 28.34px;
+            height: 28.71px;
+            @media screen and (max-width: 960px) {
+              font-weight: 400;
+              width: 20px;
+              height: 20px;
+            }
+          }
 
+          .active {
+            color: #feb449;
+            opacity: 1;
+            width: 34.34px;
+            height: 32.71px;
+          }
+        }
+
+        .para {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          font-family: SF;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 33px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 0.05em;
+          color: #3d3d3d;
+          margin-bottom: 60px;
+          padding: 30px;
+          @media screen and (max-width: 960px) {
+            margin-top: -40px;
+            padding: 0px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .linecontainer {
+      margin-top: -40px;
+      .view-more-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          width: 20% !important;
+          margin-bottom: 0px;
+          cursor: pointer;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 27px;
+          color: #313133;
+          text-shadow: 0px 0px 2px rgba(254, 180, 73, 0.1);
+        }
+        .arrow-icon {
+          font-size: 1.8em !important;
+          cursor: pointer;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .rating-review-wrapper {
+      padding-bottom: 40px;
+      .reviews-show-container {
+        padding-top: 40px;
+        .ratingicons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon {
+            filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+            cursor: pointer;
+            font-size: 2.6em;
+            opacity: 0.25;
+            color: #6d6d6d;
             margin-right: 1px;
           }
 
@@ -645,51 +679,148 @@
             opacity: 1;
           }
         }
-
-        .textarea {
-          width: 100%;
-          background-color: #fcfcfc;
-
-          border: 1px solid #d8d8d8;
-          border: none;
-          border-radius: 3px;
-
-          padding: 0.6180469716em;
-          box-shadow: inset 0 1px 1px rgb(0 0 0 / 13%);
-          outline: none;
-
-          font-family: "Roboto";
-          font-weight: 300;
-          font-size: 13px;
-          line-height: 1.42857143;
-          color: #333;
-        }
-
-        .btn-submit {
-          margin-top: 5px;
-          cursor: pointer;
-          font-family: "Roboto";
-          font-weight: 400;
-          font-size: 11px;
-
-          width: 120px;
-          height: 30px;
-
-          color: #fff;
-          background: #313133;
-          border-radius: 6px;
-
-          border: 1px solid #313133;
-
+        .ratingtext {
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-top: -20px;
+          h1 {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 98px;
+            margin-top: -4px;
+            color: #313133;
+          }
+          p {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 45px;
+            display: flex;
+            align-items: center;
+            color: #313133;
+          }
+        }
+        .progress-container {
+          .progress-bars {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            p {
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 30px;
+              display: flex;
+              align-items: center;
+              color: #313133;
+            }
+            .line-progress {
+              width: 50%;
+              height: 10px;
+              margin-top: -10px;
+            }
+          }
+        }
+      }
 
-          transition: all 0.2s ease-in-out;
+      .leave-review {
+        width: 95%;
+        padding: 10px 10px 30px 10px;
+        margin: 10px 10px 30px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
+        border: 1px solid #d8d8d8;
 
-          &:hover {
-            background: #feb449;
-            border-color: #feb449;
+        .tab {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #313133;
+          cursor: pointer;
+        }
+
+        .wrap-container {
+          padding: 0 20px 20px;
+
+          .star-wrapper {
+            display: flex;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              cursor: pointer;
+              font-size: 2.6em;
+              opacity: 0.25;
+              color: #6d6d6d;
+              margin-right: 10px;
+            }
+
+            .active {
+              color: #feb449;
+              opacity: 1;
+            }
+          }
+
+          .textarea {
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+            min-height: 200px;
+            padding: 0.6180469716em;
+            background: rgba(245, 245, 245, 0.8);
+            box-shadow: inset 1px 1px 20px rgba(0, 0, 0, 0.05);
+            outline: none;
+            margin-top: 30px;
+            font-family: "Roboto";
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 1.42857143;
+            color: #333;
+          }
+          .submit-btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .btn-submit {
+              margin-top: 15px;
+
+              cursor: pointer;
+              font-family: "Roboto";
+              font-weight: 400;
+              font-size: 11px;
+
+              width: 120px;
+              height: 30px;
+
+              color: #fff;
+              background: #313133;
+              border-radius: 6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #313133;
+
+              transition: all 0.2s ease-in-out;
+
+              &:hover {
+                background: #feb449;
+                border-color: #feb449;
+              }
+            }
           }
         }
       }
@@ -744,20 +875,17 @@
         .download-save-wrapper {
           margin-top: 10px;
 
-
           .download-btn {
             padding: 10px 20px;
 
             span {
               font-size: 16px;
-
             }
           }
 
           .heart {
             margin: 0 20px;
             font-size: 30px;
-
           }
 
           .box {
@@ -786,7 +914,6 @@
     }
 
     .product-info {
-
       .tab-wrapper {
         padding: 5px 0 0 1px;
         overflow-x: scroll;
@@ -836,7 +963,6 @@
 
 @media screen and (max-width: 767px) {
   .bimroom-product-page {
-
     .top-back-wrapper {
       flex-direction: column;
       align-items: flex-start;
@@ -897,7 +1023,6 @@
 
     .product-view-desc-section {
       .product-view {
-
         .download-save-wrapper {
           padding: 0px;
           flex-wrap: wrap;
@@ -930,7 +1055,6 @@
     }
 
     .product-review-section {
-
       .product-reivew {
         .tab {
           padding: 15px 20px;
@@ -949,7 +1073,7 @@
 
             .head {
               .title {
-                display: none
+                display: none;
               }
             }
           }
@@ -997,8 +1121,6 @@
         }
       }
     }
-
-
   }
 }
 
@@ -1015,7 +1137,6 @@
       }
 
       .description {
-
         .title,
         .para {
           padding: 0 10px;
@@ -1024,7 +1145,6 @@
     }
 
     .related-product-section {
-
       .product-wrapper {
         grid-template-columns: repeat(1, 1fr);
       }

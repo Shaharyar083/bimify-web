@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
-import {
-  FaRegHeart,
-  FaHeart,
-  FaRegStar,
-  FaStar,
-  FaCloudDownloadAlt,
-} from "react-icons/fa";
-import brand from "../../assets/product images/brand.png";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { getProductByIDs, productToCart } from "../../api";
 import { useDispatch, useSelector } from "react-redux";
 import { useMsal } from "@azure/msal-react";
 import { setUser } from "../../redux/reducers/user-reducer";
 import TagManager from "react-gtm-module";
 import ModalComponent from "../Modal/Modal";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import {Link} from 'react-router-dom'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const RelatedProducts = ({ relatedProductIDs }) => {
   const { accounts } = useMsal();
@@ -74,13 +73,48 @@ const RelatedProducts = ({ relatedProductIDs }) => {
     };
   }, [relatedProductIDs]);
 
+  const sliderSettings = {
+    slidesToShow: 3.5,
+    slidesToScroll: 1,
+    infinite: false,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2.5,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const slider = React.useRef(null);
+
   return (
     <>
       {relatedProduct.length > 0 && (
         <div className="related-product-section">
-          <div className="tab">RELATED PRODUCTS</div>
+          <div className="headercontainer">
+            <div className="tab">Related Objects</div>
+            <div className="sliderButton">
+              <IoIosArrowBack
+                className="backbutton"
+                onClick={() => slider?.current?.slickPrev()}
+              />
+              <IoIosArrowForward
+                className="forwardbutton"
+                onClick={() => slider?.current?.slickNext()}
+              />
+            </div>
+          </div>
 
-          <div className="product-wrapper">
+          <Slider ref={slider} {...sliderSettings} className="product-wrapper">
             {relatedProduct.length > 0 &&
               relatedProduct.map((data, i) => {
                 return (
@@ -93,43 +127,18 @@ const RelatedProducts = ({ relatedProductIDs }) => {
                           <FaRegHeart />
                         )}
                       </div>
-
-                      <div className="star">
-                        {[1, 2, 3, 4, 5].map((i) =>
-                          i <=
-                          p_rating.find(
-                            (val) => val.productID === `${data?.id}`
-                          )?.rating ? (
-                            <FaStar color="#feb449" key={i} />
-                          ) : (
-                            <FaRegStar key={i} />
-                          )
-                        )}
-                      </div>
                     </div>
-
                     <Link to={`/product/${data.slug}`} className="p_body">
+                    <div className="p_body">
                       <div className="thumbnail">
                         <img src={data.images[0]?.src} alt="" />
                       </div>
-                      <div className="p_title">{data.name}</div>
+                    </div>
                     </Link>
-
-                    <div
-                      className="download"
-                      onClick={() => handleModalShow(data)}
-                    >
-                      <FaCloudDownloadAlt className="icon" />
-                      <span>Download</span>
-                    </div>
-
-                    <div className="brand">
-                      <img src={brand} alt="" />
-                    </div>
                   </div>
                 );
               })}
-          </div>
+          </Slider>
         </div>
       )}
 
