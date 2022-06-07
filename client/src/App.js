@@ -14,8 +14,8 @@ import { useLocation } from "react-router-dom";
 // components
 import Home from "./pages/Home";
 import Favorite from "./pages/Favorite";
-import Product from "./pages/Product";
 import Catalog from "./pages/Catalog";
+import Product from "./pages/Product";
 import Blog from "./pages/Blog";
 
 // api's
@@ -65,11 +65,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Catalog />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/blog" element={<Blog />} />
-
-        <Route path="/product" element={<Product />} />
-        <Route path="/product/:id" element={<Catalog />} />
       </Routes>
     </>
   );

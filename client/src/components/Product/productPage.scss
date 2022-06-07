@@ -1,0 +1,1033 @@
+.bimroom-product-page {
+  max-width: 1366px;
+  margin: auto;
+
+  .top-back-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    .goback {
+      width: 87px;
+      height: 44px;
+
+      cursor: pointer;
+
+      font-family: "Roboto", Sans-serif;
+      font-size: 17px;
+      font-weight: 300;
+      color: #313133;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 3px;
+
+      transition: all 0.2s ease-in-out;
+
+      span {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: #feb449;
+      }
+    }
+
+    .catalog {
+      color: #313133;
+      font-size: 13px;
+      font-family: "montserrat";
+      text-transform: uppercase;
+
+      .cat1,
+      .cat2,
+      .cat3 {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .extra {
+      width: 87px;
+    }
+  }
+
+  .title-brand-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    .title {
+      max-width: 50%;
+      color: #313133;
+      font-family: "Poppins", Sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .brand {
+      width: 120px;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .product-view-desc-section {
+    display: flex;
+    padding: 10px;
+
+    .product-view {
+      width: 50%;
+
+      .tab-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .tab {
+          width: 100%;
+          height: 46px;
+
+          cursor: pointer;
+
+          padding: 10px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background: #f5f5f5;
+          border-radius: 20px 20px 0 0;
+
+
+          font-family: "Poppins", Sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 0.1em;
+          letter-spacing: 0px;
+          color: #333333;
+        }
+
+        .active {
+          background: #fff;
+          box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25);
+
+          font-weight: 700;
+        }
+      }
+
+      .image-view {
+        overflow: hidden;
+        width: 100%;
+        height: 400px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 20px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .slider {
+        overflow: hidden;
+
+        .slider-image {
+          outline: none !important;
+          padding: 20px;
+          width: 100%;
+          height: 400px;
+
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+
+          img {
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+
+        .left-control {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: flex;
+          align-items: center;
+          z-index: 2;
+        }
+
+        .right-control {
+          cursor: pointer;
+
+          position: absolute;
+          top: 50%;
+          right: 0;
+          display: flex;
+          align-items: center;
+          z-index: 2;
+        }
+      }
+
+      .download-save-wrapper {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        .download-btn {
+          cursor: pointer;
+
+          text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+          fill: #ffffff;
+          color: #ffffff;
+          background-color: #423e3f;
+          border-radius: 5px 5px 5px 5px;
+          padding: 10px 25px;
+
+          display: flex;
+          align-items: center;
+
+          transition: all 0.2s ease-in-out;
+
+          span {
+            font-family: "Poppins", Sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+          }
+
+          &:hover {
+            background-color: #feb449;
+          }
+        }
+
+        .heart {
+          margin: 0 45px;
+          font-size: 35px;
+          cursor: pointer;
+          color: #423e3f;
+          transition: all 0.2s ease-in-out;
+
+          .icon {
+            margin-top: -10px;
+          }
+        }
+
+        .box {
+          width: 40px;
+
+          img {
+            cursor: pointer;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .description {
+      width: 50%;
+      overflow: hidden;
+
+
+      .space {
+        margin-top: 60px;
+      }
+
+      .title {
+        padding: 0 44px;
+
+        color: #313133;
+
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: 0px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 15px;
+      }
+
+      .para {
+        padding: 0 44px;
+
+        font-family: 'Archivo', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.42857143;
+
+        color: #313133;
+      }
+    }
+  }
+
+  .product-info {
+    margin: 40px 10px 20px;
+
+    .tab-wrapper {
+      display: flex;
+      align-items: center;
+
+      .tab {
+        background: #f5f5f5;
+        border-radius: 20px 20px 0 0;
+
+        padding: 10px 25px;
+
+        height: 46px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        font-family: "Poppins", Sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #313133;
+
+
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .active {
+        background: #fff;
+        box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25);
+        font-weight: 700;
+      }
+    }
+
+    .tab-content {
+      padding: 20px 10px;
+      border: 1px solid rgba(196, 196, 196, .25);
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+
+      .table_title {
+        font-family: "Poppins", Sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #313133;
+      }
+
+      .table_heading,
+      .table_data {
+        font-family: "Poppins", Sans-serif;
+        font-size: 14px;
+        color: #313133;
+      }
+
+      .table_heading {
+        width: 45%;
+      }
+
+    }
+  }
+
+  .related-product-section {
+    margin: 10px 10px 10px;
+
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
+    border: 1px solid #d8d8d8;
+
+    .tab {
+      font-family: "Work Sans", Sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #feb449;
+      padding: 20px 25px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .product-wrapper {
+      padding: 0 25px 20px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      flex-wrap: wrap;
+      column-gap: 10px;
+      row-gap: 10px;
+
+      .p_card {
+        border-radius: 5px;
+        padding: 5px 10px 15px;
+        box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 25%);
+        background-color: #ffffff;
+        border: 1px solid #fff;
+        // margin-bottom: 25px;
+        width: 100%;
+        // margin-right: 20px;
+
+        .p_header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .heart {
+            font-size: 0.9em;
+            color: #7a7a7a;
+            cursor: pointer;
+          }
+
+          .star {
+            font-size: 0.7em;
+            color: rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        .p_body {
+          text-decoration: none;
+          width: 100%;
+          margin-top: 20px;
+
+          .thumbnail {
+            width: 100%;
+            height: 160px;
+            padding: 0 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              max-width: 100%;
+              // width: 100%;
+              max-height: 100%;
+            }
+          }
+
+          .p_title {
+            text-align: center;
+            font-family: "Roboto", Sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: #4a4a4a;
+            margin: 20px 0 35px;
+            height: 26px;
+
+            padding: 0 10px;
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            .p_title {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .download {
+          cursor: pointer;
+          border-radius: 5px;
+          border: 1px solid #313131;
+          background: #423e3f !important;
+
+          width: 110px;
+          height: 30px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          color: #fff;
+
+          margin: 0 auto 20px;
+
+          transition: all 0.2s ease-in-out;
+
+          .icon {
+            font-size: 15px;
+            margin-bottom: 3px;
+          }
+
+          span {
+            font-family: "Roboto";
+            font-weight: 400;
+            font-size: 11px;
+            margin-left: 10px;
+          }
+
+          &:hover {
+            background: #feb449 !important;
+            border-color: #feb449 !important;
+          }
+        }
+
+        .brand {
+          width: 90%;
+          margin: auto;
+
+          img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .product-review-section {
+    display: flex;
+
+    .product-reivew {
+      width: 65%;
+      margin: 10px 10px 30px;
+
+      border-radius: 3px;
+      box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
+      border: 1px solid #d8d8d8;
+
+      .tab {
+        font-family: "Work Sans", Sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #feb449;
+        padding: 20px 25px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .msg-box-wrapper {
+        padding: 0 20px;
+
+        .msg {
+          margin-bottom: 2.617924em;
+          background-color: #3d9cd2;
+          border-radius: 2px;
+          color: #fff;
+          border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
+          padding: 1em 2em 1em 3.5em;
+
+          font-family: "Work Sans", Sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+
+      .review-list {
+        padding: 0 20px;
+
+        .wrap {
+          margin-bottom: 15px;
+          border-style: solid;
+          border-width: 1px 1px 1px 1px;
+          border-color: #D8D8D8;
+          border-radius: 10px !important;
+          padding: 0.9em 1.618em 0.3em;
+          background-color: #fcfcfc;
+
+          font-family: 'Roboto';
+          font-weight: 300;
+          color: #333333;
+          font-size: 14px;
+          line-height: 20px;
+
+
+          .head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 14px;
+
+            .title {
+
+              font-style: italic;
+            }
+
+            .icon {
+              cursor: pointer;
+              font-size: 0.9em;
+              opacity: 0.25;
+              color: #6d6d6d;
+
+              margin-right: 1px;
+            }
+
+            .active {
+              color: #feb449;
+              opacity: 1;
+            }
+          }
+
+          .para {
+            margin-bottom: 10px;
+          }
+        }
+
+      }
+    }
+
+    .leave-review {
+      width: 35%;
+
+      margin: 10px 10px 30px;
+
+      border-radius: 3px;
+      box-shadow: 0px 0px 5px 1px rgb(188 188 188 / 32%);
+      border: 1px solid #d8d8d8;
+
+      .tab {
+        font-family: "Work Sans", Sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #feb449;
+        padding: 20px 25px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .wrap-container {
+        padding: 0 20px 20px;
+
+        .sub-title {
+          margin-bottom: 5px;
+          font-family: "Roboto";
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 1.42857143;
+          color: #333;
+
+          span {
+            color: #e2401c;
+          }
+        }
+
+        .star-wrapper {
+          display: flex;
+          align-items: center;
+          margin-bottom: 7px;
+
+          .icon {
+            cursor: pointer;
+            font-size: 0.9em;
+            opacity: 0.25;
+            color: #6d6d6d;
+
+            margin-right: 1px;
+          }
+
+          .active {
+            color: #feb449;
+            opacity: 1;
+          }
+        }
+
+        .textarea {
+          width: 100%;
+          background-color: #fcfcfc;
+
+          border: 1px solid #d8d8d8;
+          border: none;
+          border-radius: 3px;
+
+          padding: 0.6180469716em;
+          box-shadow: inset 0 1px 1px rgb(0 0 0 / 13%);
+          outline: none;
+
+          font-family: "Roboto";
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 1.42857143;
+          color: #333;
+        }
+
+        .btn-submit {
+          margin-top: 5px;
+          cursor: pointer;
+          font-family: "Roboto";
+          font-weight: 400;
+          font-size: 11px;
+
+          width: 120px;
+          height: 30px;
+
+          color: #fff;
+          background: #313133;
+          border-radius: 6px;
+
+          border: 1px solid #313133;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background: #feb449;
+            border-color: #feb449;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .bimroom-product-page {
+    padding: 0 20px;
+    max-width: 100%;
+
+    .related-product-section {
+      .product-wrapper {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .bimroom-product-page {
+    padding: 0px 10px;
+
+    .title-brand-wrapper {
+      padding: 10px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+
+      .title {
+        max-width: 70%;
+        font-size: 23px;
+      }
+
+      .brand {
+        width: 90px;
+      }
+    }
+
+    .product-view-desc-section {
+      flex-direction: column;
+
+      .product-view {
+        width: 100%;
+
+        .tab-wrapper {
+          .tab {
+            font-size: 14px;
+          }
+        }
+
+        .download-save-wrapper {
+          margin-top: 10px;
+
+
+          .download-btn {
+            padding: 10px 20px;
+
+            span {
+              font-size: 16px;
+
+            }
+          }
+
+          .heart {
+            margin: 0 20px;
+            font-size: 30px;
+
+          }
+
+          .box {
+            width: 30px;
+          }
+        }
+      }
+
+      .description {
+        width: 100%;
+
+        .space {
+          margin-top: 40px;
+        }
+
+        .title {
+          font-size: 21px;
+          padding: 0 20px;
+        }
+
+        .para {
+          font-size: 15px;
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .product-info {
+
+      .tab-wrapper {
+        padding: 5px 0 0 1px;
+        overflow-x: scroll;
+
+        .tab {
+          min-width: max-content;
+          font-size: 14px;
+        }
+      }
+
+      .tab-content {
+        .table_title {
+          font-size: 12px;
+        }
+
+        .table_heading,
+        .table_data {
+          font-size: 12px;
+        }
+
+        .table_heading {
+          width: 45%;
+        }
+      }
+    }
+
+    .product-review-section {
+      display: flex;
+      flex-direction: column;
+
+      .product-reivew {
+        width: auto;
+      }
+
+      .leave-review {
+        width: auto;
+      }
+    }
+
+    .related-product-section {
+      .product-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bimroom-product-page {
+
+    .top-back-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .catalog {
+        text-align: center;
+        margin: auto;
+
+        padding: 20px;
+      }
+
+      .extra {
+        width: 0px;
+      }
+    }
+
+    .title-brand-wrapper {
+      .title {
+        max-width: 100%;
+
+        padding-right: 20px;
+      }
+
+      .brand {
+        width: 130px;
+      }
+    }
+
+    .related-product-section {
+      .product-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .bimroom-product-page {
+    padding: 0;
+
+    .title-brand-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      .title {
+        max-width: 100%;
+        padding-right: 0px;
+        font-size: 21px;
+      }
+
+      .brand {
+        margin-top: 10px;
+        margin-left: auto;
+        width: 80px;
+      }
+    }
+
+    .product-view-desc-section {
+      .product-view {
+
+        .download-save-wrapper {
+          padding: 0px;
+          flex-wrap: wrap;
+
+          .download-btn {
+            span {
+              padding: 10 15px;
+              font-size: 14px;
+            }
+          }
+
+          .heart {
+            margin: 0 15px;
+            font-size: 30px;
+          }
+        }
+      }
+
+      .description {
+        margin-top: 0px;
+
+        .title {
+          font-size: 20px;
+        }
+
+        .para {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .product-review-section {
+
+      .product-reivew {
+        .tab {
+          padding: 15px 20px;
+        }
+
+        .msg-box-wrapper {
+          padding: 0 15px;
+        }
+
+        .review-list {
+          padding: 0 15px;
+
+          .wrap {
+            margin-bottom: 15px;
+            padding: 0.7em 1em 0.2em;
+
+            .head {
+              .title {
+                display: none
+              }
+            }
+          }
+        }
+      }
+
+      .leave-review {
+        .tab {
+          padding: 20px 15px;
+        }
+
+        .wrap-container {
+          padding: 0 15px 15px;
+        }
+      }
+    }
+
+    .related-product-section {
+      .tab {
+        padding: 15px 20px;
+      }
+
+      .product-wrapper {
+        padding: 0 20px 20px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bimroom-product-page {
+    .product-view-desc-section {
+      .product-view {
+        .tab-wrapper {
+          flex-direction: column;
+
+          .btn-image-view {
+            padding: 11px 25px;
+          }
+
+          .active {
+            padding: 11px 25px;
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bimroom-product-page {
+    // margin-top: 50px;
+
+    .product-view-desc-section {
+      .product-view {
+        .image-view {
+          height: 300px;
+          padding: 20px;
+        }
+      }
+
+      .description {
+
+        .title,
+        .para {
+          padding: 0 10px;
+        }
+      }
+    }
+
+    .related-product-section {
+
+      .product-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

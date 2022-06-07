@@ -1,52 +1,53 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import ProductPage from "../components/Product Page";
-import Footer from "../components/Footer";
-import TagManager from "react-gtm-module";
-import algoliasearch from "algoliasearch/lite";
-import { InstantSearch } from "react-instantsearch-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { resetAllFilters } from "../redux/reducers/product-reducer";
 
-const searchClient = algoliasearch(
-  "MLN6C7QSR3",
-  "d5d83c9e0103cbfeef63fcd712daa7e3"
-);
+// packages
+import TagManager from "react-gtm-module";
+import { useLocation } from "react-router-dom";
+
+// api
+import { getProductBySlug } from "../api";
+
+// components
+import Navbar from "../components/Navbar";
+import ProductPage from "../components/Product";
+import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 const Product = () => {
-  const dispatch = useDispatch();
+  const location = useLocation();
+
+  const slug = location.pathname.split("/product/");
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    setProduct([]);
+    getProductBySlug(slug[1].split("/")[0])
+      .then((data) => {
+        setProduct(data);
+      })
+      .catch((err) => console.log("product detail page error =>", err.message));
+  }, [location.pathname]);
 
   useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
         event: "pageview",
-        path: "/product",
+        path: "/product/product-name",
       },
     });
   }, []);
-
-  useEffect(() => {
-    return () => {
-      dispatch(resetAllFilters());
-    };
-  }, []);
-
   return (
     <>
-      <Navbar />
-      <InstantSearch
-        indexName={"wp_posts_product"}
-        searchClient={searchClient}
-        // searchState={{
-        //   query: "iphone",
-        //   refinementList: {
-        //     brand: ["Furniture"],
-        //   },
-        // }}
-      >
-        <ProductPage />
-      </InstantSearch>
-      <Footer />
+      {product.length === 0 ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar />
+          <ProductPage product={product[0]} />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
