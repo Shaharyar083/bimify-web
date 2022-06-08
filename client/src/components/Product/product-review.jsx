@@ -219,9 +219,9 @@ const ProductReview = ({ productID }) => {
                 ?.reviews?.map((data, i) => (
                   <>
                     <Review data={data} key={i} />
-                    
-                      {i === p_rating_review[0]?.reviews?.length - 1 ? (
-                    <div className="linecontainer">
+
+                    {i === p_rating_review[0]?.reviews?.length - 1 ? (
+                      <div className="linecontainer">
                         <div className="view-more-line">
                           <div>
                             <img src={Line32} alt="" />
@@ -229,18 +229,18 @@ const ProductReview = ({ productID }) => {
                           <p>View More</p>
                           <span>
                             {" "}
-                            <MdOutlineKeyboardArrowDown className="arrow-icon"/>
+                            <MdOutlineKeyboardArrowDown className="arrow-icon" />
                           </span>
                           <div>
                             <img src={Line32} alt="" />
                           </div>
                         </div>
-                    </div>
-                      ) : (
-                        <div className="linecontainer">
+                      </div>
+                    ) : (
+                      <div className="linecontainer">
                         <img src={Line32} alt="" />
-                        </div>
-                      )}
+                      </div>
+                    )}
                   </>
                 ))}
             </div>
