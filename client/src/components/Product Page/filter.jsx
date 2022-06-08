@@ -6,7 +6,12 @@ import {
   Panel,
   HierarchicalMenu,
 } from "react-instantsearch-dom";
-import { CustomAlgoliaSearch, NumSlider, Ratings } from "../Widget";
+import {
+  CustomAlgoliaSearch,
+  NumSlider,
+  Ratings,
+  CustomCurrentRefinements,
+} from "../Widget";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import Section from "./Section";
@@ -19,16 +24,36 @@ const Filter = () => {
 
   return (
     <div className="filter-wrapper">
-      <div className="text">{t("product.4")}</div>
+      <div className="product-section">
+        <div className="refine-tag-wrapper">
+          <CustomCurrentRefinements />
+        </div>
+      </div>
       <div className="thumbnail-render">
         <div className="thumbnail-text">{t("product.5")}</div>
         <ToggleSwitch />
       </div>
+      <div className="text mt-2">{t("product.34")}</div>
 
       <div className="text mt-3">{t("product.6")}</div>
 
       <div className="input-search">
         <CustomAlgoliaSearch defaultRefinement={searched} />
+      </div>
+
+      <div className="category-search">
+        <Section title="Category" defaultExpanded={true}>
+          <Panel>
+            <HierarchicalMenu
+              attributes={[
+                "taxonomies_hierarchical.product_cat.lvl0",
+                "taxonomies_hierarchical.product_cat.lvl1",
+                "taxonomies_hierarchical.product_cat.lvl2",
+              ]}
+              defaultRefinement={selectedCategory}
+            />
+          </Panel>
+        </Section>
       </div>
 
       <div className="brand-search">
@@ -42,21 +67,6 @@ const Filter = () => {
                 placeholder: "Search for brands…",
                 resetTitle: "",
               }}
-            />
-          </Panel>
-        </Section>
-      </div>
-
-      <div className="category-search">
-        <Section title="Category" defaultExpanded={true}>
-          <Panel>
-            <HierarchicalMenu
-              attributes={[
-                "taxonomies_hierarchical.product_cat.lvl0",
-                "taxonomies_hierarchical.product_cat.lvl1",
-                "taxonomies_hierarchical.product_cat.lvl2",
-              ]}
-              defaultRefinement={selectedCategory}
             />
           </Panel>
         </Section>
@@ -91,6 +101,7 @@ const Filter = () => {
           </Panel>
         </Section>
       </div>
+      <div className="rest-filters-button">
 
       <ClearRefinements
         clearsQuery
@@ -98,6 +109,7 @@ const Filter = () => {
           reset: "Reset all filters",
         }}
       />
+      </div>
     </div>
   );
 };

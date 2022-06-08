@@ -17,15 +17,16 @@ const ToggleSwitch = () => {
     <Switch
       checked={toggle}
       onChange={handleToggle}
-      handleDiameter={16}
+      handleDiameter={50}
       offColor="#313133"
       onColor="#FEB449"
       offHandleColor="#fff"
       onHandleColor="#fff"
-      height={26}
-      width={65}
-      borderRadius={32}
+      height={35}
+      width={110}
+      borderRadius={5}
       activeBoxShadow="0px 0px 1px 2px #fff"
+      className="handleSwitchToggle"
       uncheckedIcon={
         <div
           style={{
@@ -33,9 +34,9 @@ const ToggleSwitch = () => {
             justifyContent: "center",
             alignItems: "center",
             height: "100%",
-            fontSize: 9,
+            fontSize: 14,
             color: "#fff",
-            paddingRight: 5,
+            marginLeft: "-20px",
             fontFamily: "Montserrat",
           }}
         >
@@ -49,16 +50,17 @@ const ToggleSwitch = () => {
             justifyContent: "center",
             alignItems: "center",
             height: "100%",
-            fontSize: 9,
+            fontSize: 14,
             color: "#fff",
-            paddingLeft: 5,
+            paddingLeft: "20px",
             fontFamily: "Montserrat",
+            marginLeft: "10px",
           }}
         >
           {t("product.3")}
         </div>
       }
-      className="react-switch"
+      // className="react-switch"
       id="small-radius-switch"
     />
   );

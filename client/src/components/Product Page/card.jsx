@@ -21,6 +21,8 @@ import { useTranslation } from "react-i18next";
 // images
 import brand from "../../assets/product images/brand.png";
 import emptyImage from "../../assets/empty-image.png";
+import dlcould7 from "../../assets/images/product/dlcould7.png";
+import Line32 from "../../assets/images/other/Line32.png";
 
 const Card = ({ hit }) => {
   const { t, i18n } = useTranslation();
@@ -77,6 +79,23 @@ const Card = ({ hit }) => {
     <>
       <div className="p_card">
         <div className="p_header">
+
+
+        <div className="star">
+            {/* {[1, 2, 3, 4, 5].map((i) =>
+              i <=
+              p_rating.find((val) => val.productID === `${hit.post_id}`)
+                ?.rating ? ( */}
+                <FaStar color="#feb449"  />
+                <p>{p_rating[0]?.rating}</p>
+              {/* ) */}
+               {/* : (
+                {/* <FaRegStar key={i} /> */}
+              {/* ) */}
+            {/* )} } */}
+          </div>
+
+
           <div className="heart" onClick={() => handleCart(hit)}>
             {user?.cart?.includes(hit?.post_id) ? (
               <FaHeart color="#337ab7" />
@@ -85,17 +104,7 @@ const Card = ({ hit }) => {
             )}
           </div>
 
-          <div className="star">
-            {[1, 2, 3, 4, 5].map((i) =>
-              i <=
-              p_rating.find((val) => val.productID === `${hit.post_id}`)
-                ?.rating ? (
-                <FaStar color="#feb449" key={i} />
-              ) : (
-                <FaRegStar key={i} />
-              )
-            )}
-          </div>
+      
         </div>
 
         <div onClick={() => moveProductDetailPage(hit)}>
@@ -117,20 +126,25 @@ const Card = ({ hit }) => {
                 <img src={emptyImage} alt="" />
               )}
             </div>
-            <div className="p_title">
+            {/* <div className="p_title">
               <Highlight attribute="post_title" tagName="mark" hit={hit} />
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <div className="download" onClick={handleModalShow}>
-          <FaCloudDownloadAlt className="icon" />
-          <span>{t("product.31")}</span>
-        </div>
+        <div className="under-image-line">
+        <img src={Line32} alt="" /></div>
 
         <div className="brand">
           <img src={brand} alt="" />
         </div>
+
+        <div className="download" onClick={handleModalShow}>
+          <img src={dlcould7} alt="" className="icon"  />
+          <span>{t("product.31")}</span>
+        </div>
+
+ 
       </div>
 
       <ModalComponent

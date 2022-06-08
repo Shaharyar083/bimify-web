@@ -1,10 +1,12 @@
 import { connectSearchBox } from "react-instantsearch-dom";
-import { FaSearch } from "react-icons/fa";
+import { RiSearchLine } from "react-icons/ri";
+import './NumSlider.css'
 
 const CustomAlgoliaSearch = connectSearchBox(
   ({ currentRefinement, refine }) => {
     return (
       <>
+       <RiSearchLine className="search-icon"/>
         <input
           type="text"
           placeholder="Search"
@@ -13,7 +15,7 @@ const CustomAlgoliaSearch = connectSearchBox(
             refine(e.target.value);
           }}
         />
-        {currentRefinement && <FaSearch className="icon" />}
+       
       </>
     );
   }

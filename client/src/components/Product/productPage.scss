@@ -1,3 +1,6 @@
+.slick-next {
+  display: none !important;
+}
 .bimroom-product-page {
   max-width: 1366px;
   margin: auto;
@@ -366,6 +369,9 @@
         @media screen and (max-width: 430px) {
           font-size: 26px;
         }
+        @media screen and (max-width: 360px) {
+          font-size: 18px;
+        }
       }
 
       .sliderButton {
@@ -373,16 +379,27 @@
           font-size: 2em;
           margin-right: 20px;
           cursor: pointer;
+          @media  screen and (max-width: 360px) {
+            font-size: 1.5em;
+          margin-right: 15px;
+          }
         }
         .forwardbutton {
           cursor: pointer;
           margin-left: 20px;
           font-size: 2em;
+          @media  screen and (max-width: 360px) {
+            font-size: 1.5em;
+            margin-left: 20px;
+          }
         }
       }
     }
     .product-wrapper {
       padding-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .p_card {
         padding: 5px 10px 15px;
         background: #ffffff;
@@ -390,6 +407,11 @@
         width: 320px !important;
         height: 360px;
         margin: 30px;
+        @media  screen and (max-width: 410px) {
+          width: 250px !important;
+          height: 360px;
+          margin: 20px;
+        }
 
         .p_header {
           display: flex;
@@ -632,7 +654,7 @@
         align-items: center;
         justify-content: center;
         p {
-          width: 20% !important;
+          width: 300px;
           margin-bottom: 0px;
           cursor: pointer;
           font-family: "Poppins";
@@ -642,10 +664,27 @@
           line-height: 27px;
           color: #313133;
           text-shadow: 0px 0px 2px rgba(254, 180, 73, 0.1);
+          @media screen and (max-width: 1200px) {
+            font-size: 14px;
+            width: 300px;
+          }
+          @media screen and (max-width: 900px) {
+            font-size: 14px;
+            width: 500px;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 14px;
+            width: 750px;
+          }
+          @media screen and (max-width: 425px) {
+            font-size: 14px;
+            width: 1100px;
+          }
         }
         .arrow-icon {
           font-size: 1.8em !important;
           cursor: pointer;
+          margin-left: -10px;
         }
         img {
           width: 100%;
@@ -1124,7 +1163,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
   .bimroom-product-page {
     // margin-top: 50px;
 

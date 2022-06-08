@@ -86,9 +86,21 @@ const RelatedProducts = ({ relatedProductIDs }) => {
         },
       },
       {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.1,
+        },
+      },
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1.2,
         },
       },
     ],

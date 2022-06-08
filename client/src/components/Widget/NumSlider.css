@@ -1,3 +1,40 @@
+
+.arrownexttwo {
+  position: relative;
+  width: 40px;
+  margin-left: -18px;
+}
+.arrownextone {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: -4px;
+  height: 15px;
+  width: 10px;
+}
+
+
+.arrownexttwotwo {
+  position: relative;
+  width: 40px;
+  margin-right: -18px;
+  /* margin-left: -18px; */
+  transform: rotate(180deg);
+}
+.arrownextonetwo {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 14px;
+  height: 15px;
+  width: 10px;
+  transform: rotate(180deg);
+}
+
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+}
+
 .ais-RangeSlider .slider-rail {
   background-color: rgba(65, 66, 71, 0.08);
   border-radius: 3px;

@@ -1,5 +1,5 @@
 import React from "react";
-import { MdOutlineCancel } from "react-icons/md";
+import { ImCross } from "react-icons/im";
 import { connectCurrentRefinements } from "react-instantsearch-dom";
 
 const CustomCurrentRefinements = connectCurrentRefinements(
@@ -63,7 +63,7 @@ const CustomCurrentRefinements = connectCurrentRefinements(
           list?.map((data, idx) => (
             <div className="tags" key={idx}>
               <div className="label">{data?.label}</div>
-              <MdOutlineCancel
+              <ImCross
                 className="cancel"
                 onClick={() => {
                   refine(data.cancel);

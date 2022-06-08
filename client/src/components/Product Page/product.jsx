@@ -14,9 +14,10 @@ const Product = () => {
   const { t, i18n } = useTranslation();
   return (
     <div className="product-section">
-      <div className="refine-tag-wrapper">
+      {/* <div className="refine-tag-wrapper">
         <CustomCurrentRefinements />
-      </div>
+      </div> */}
+      <div className="sort-section-wrapper">
       <div className="sort-section">
         <select>
           <option>{t("product.11")}</option>
@@ -25,9 +26,19 @@ const Product = () => {
           <option>{t("product.14")}</option>
         </select>
 
-        <div className="result">
+        <select className="show20">
+          <option>{t("product.33")}</option>
+        </select>
+      </div>
+
+       <div className="pagination-wrapper">
+        <div className="pagination">
+        <PaginationAlgolia />
+      </div>
+      <div className="result">
           <Stats />
         </div>
+       </div>
       </div>
 
       {/* <div className="product-wrapper ">
@@ -36,9 +47,7 @@ const Product = () => {
       <Hits hitComponent={Card} />
       <NoResults />
 
-      <div className="pagination">
-        <PaginationAlgolia />
-      </div>
+     
     </div>
   );
 };

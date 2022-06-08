@@ -1,6 +1,7 @@
 import React from "react";
 import useCollapse from "react-collapsed";
-import { BiChevronUp, BiChevronDown } from "react-icons/bi";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import '../Widget/NumSlider.css'
 const Section = (props) => {
   const config = {
     defaultExpanded: props.defaultExpanded || false,
@@ -13,7 +14,7 @@ const Section = (props) => {
       <div className="section-header" {...getToggleProps()}>
         <div className="section-title">{props.title}</div>
         <div className="section-icon">
-          {isExpanded ? <BiChevronUp /> : <BiChevronDown />}
+          {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
       </div>
       <div {...getCollapseProps()}>
