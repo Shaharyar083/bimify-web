@@ -1,4 +1,39 @@
+.ais-Pagination-item--selected {
+  background-color: rgba(196, 196, 196, 0.6) !important;
+}
 
+.ais-Pagination-item--selected a {
+  background-color: rgba(196, 196, 196, 0.6) !important;
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-transform: capitalize !important;
+
+  color: #313133 !important;
+
+  opacity: 0.78 !important;
+}
+
+.ais-Pagination-item--page {
+  background-color: transparent !important;
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.ais-Pagination-item--page a {
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-transform: capitalize !important;
+  color: #313133 !important;
+}
 
 .react-switch-handle {
   position: absolute !important;
@@ -107,19 +142,18 @@
           padding: 9px 9px 9px 55px;
           margin: 0;
           width: 100%;
-          font-family: 'Poppins';
+          font-family: "Poppins";
           font-style: normal;
           font-weight: 400;
           font-size: 16px;
           line-height: 30px;
           /* identical to box height */
-          
+
           display: flex;
           align-items: center;
-          
+
           color: #666666;
-          
-          
+
           display: flex;
           align-items: center;
           color: #666666;
@@ -641,6 +675,10 @@
             margin-right: 10px;
             align-items: flex-end;
             justify-content: flex-end;
+            @media screen and (max-width: 420px) {
+              justify-content: flex-start;
+              width: 60%;
+            }
           }
         }
       }
@@ -667,7 +705,14 @@
           width: 300px !important;
           height: 400px !important;
           position: relative;
-
+          @media screen and (max-width: 1375px) {
+            width: 220px !important;
+            height: 360px !important;
+          }
+          @media screen and (max-width: 420px) {
+            width: 300px !important;
+            height: 400px !important;
+          }
           .p_header {
             display: flex;
             justify-content: space-between;
@@ -881,7 +926,6 @@
 
       .filter-wrapper {
         min-width: 100%;
-
       }
 
       .product-section {
@@ -923,8 +967,12 @@
           .ais-Pagination {
             margin: auto;
             .ais-Pagination-list {
-              padding: 0;
+              padding: 20px;
               display: flex;
+              // width: 80%;
+              align-items: center;
+              justify-content: center;
+              width: 94%;
             }
           }
         }
@@ -933,21 +981,16 @@
           display: flex;
           align-items: flex-start;
           flex-direction: column;
-          select {
-            margin-left: 50px;
-          }
+          width: 100%;
+          align-items: center;
+          justify-content: center;
           .show20 {
             margin-top: 10px !important;
-            margin-left: 50px !important;
-          }
-          .result {
-            margin-left: 0px;
-            margin: 5px 0;
           }
         }
 
         .ais-Hits {
-            padding-left: 10px;
+          padding-left: 10px;
           .ais-Hits-list {
             grid-template-columns: repeat(1, 1fr);
           }
