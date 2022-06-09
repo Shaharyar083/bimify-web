@@ -20,6 +20,8 @@ const Product = () => {
 
   const [product, setProduct] = useState([]);
 
+  console.log("slug", slug[1].split("/")[0]);
+
   useEffect(() => {
     setProduct([]);
     getProductBySlug(slug[1].split("/")[0])

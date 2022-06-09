@@ -34,7 +34,6 @@ const Navbar = () => {
   const { instance, accounts } = useMsal();
   const isAuthenticated = useIsAuthenticated();
 
-  const [input, setInput] = useState("");
   const [openAccountModal, setAccountModal] = useState(false);
 
   const handleAccountModal = () => setAccountModal(!openAccountModal);
@@ -50,19 +49,6 @@ const Navbar = () => {
 
           <div className="center">
             <CategoryDropDown />
-
-            <div className="search-filter">
-              <input
-                type="text"
-                placeholder={t("search-input.1")}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-
-              <div className="icon">
-                <FaSearch />
-              </div>
-            </div>
           </div>
 
           <div className="right">
