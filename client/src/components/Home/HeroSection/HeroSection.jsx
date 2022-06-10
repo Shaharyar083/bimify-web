@@ -11,9 +11,6 @@ import View2 from "./View2";
 const HeroSection = () => {
   const settings = {
     dots: true,
-    // infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 10000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };

@@ -49,7 +49,6 @@ const ProductInfo = ({ product }) => {
             key={index}
           >
             {t(`catalog.${index + 20}`)}
-            {/* {data} */}
           </div>
         ))}
       </div>

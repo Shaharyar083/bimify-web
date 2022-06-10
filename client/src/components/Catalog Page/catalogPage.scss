@@ -15,7 +15,7 @@
 
       cursor: pointer;
 
-      font-family: "Roboto", Sans-serif;
+      font-family: "Poppins" !important;
       font-size: 17px;
       font-weight: 300;
       color: #313133;
@@ -41,7 +41,7 @@
     .catalog {
       color: #313133;
       font-size: 13px;
-      font-family: "montserrat";
+      font-family: "Poppins" !important;
       text-transform: uppercase;
 
       .cat1,
@@ -67,7 +67,7 @@
     .title {
       max-width: 50%;
       color: #313133;
-      font-family: "Roboto", Sans-serif;
+      font-family: "Poppins" !important;
       font-size: 25px;
       font-weight: 300;
     }
@@ -107,7 +107,7 @@
 
           span {
             margin-left: 10px;
-            font-family: "Work Sans", Sans-serif;
+            font-family: "Poppins" !important;
             font-size: 12px;
             font-weight: 500;
             text-transform: uppercase;
@@ -135,7 +135,7 @@
 
           span {
             margin-left: 10px;
-            font-family: "Work Sans", Sans-serif;
+            font-family: "Poppins" !important;
             font-size: 12px;
             font-weight: 500;
             text-transform: uppercase;
@@ -161,13 +161,10 @@
           max-width: 100%;
           height: 100%;
         }
-
-
       }
 
       .slider {
         overflow: hidden;
-
 
         .slider-image {
           outline: none !important;
@@ -205,7 +202,6 @@
           align-items: center;
           z-index: 2;
         }
-
       }
 
       .download-save-wrapper {
@@ -232,7 +228,7 @@
 
           span {
             margin: 0 30px;
-            font-family: "Roboto", Sans-serif;
+            font-family: "Poppins" !important;
             font-size: 13px;
             font-weight: 400;
             letter-spacing: 0.3px;
@@ -265,7 +261,7 @@
 
         text-align: center;
         color: #313133;
-        font-family: "Work Sans", sans-serif;
+        font-family: "Poppins" !important;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -275,7 +271,7 @@
 
       .para {
         padding: 0 44px;
-        font-family: "Roboto", Sans-serif;
+        font-family: "Poppins" !important;
         font-weight: 400;
         font-size: 12.5px;
         line-height: 1.42857143;
@@ -297,7 +293,7 @@
       align-items: center;
 
       .tab {
-        font-family: "Work Sans", Sans-serif;
+        font-family: "Poppins" !important;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -313,7 +309,7 @@
       }
 
       .active {
-        font-family: "Work Sans", Sans-serif;
+        font-family: "Poppins" !important;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -326,7 +322,7 @@
     }
 
     .table_title {
-      font-family: "Work Sans", Sans-serif;
+      font-family: "Poppins" !important;
       font-size: 12px;
       font-weight: 500;
       text-transform: uppercase;
@@ -337,7 +333,7 @@
 
     .table_heading,
     .table_data {
-      font-family: "Work Sans", Sans-serif;
+      font-family: "Poppins" !important;
       font-size: 12px;
     }
 
@@ -355,7 +351,7 @@
     border: 1px solid #d8d8d8;
 
     .tab {
-      font-family: "Work Sans", Sans-serif;
+      font-family: "Poppins" !important;
       font-size: 12px;
       font-weight: 500;
       text-transform: uppercase;
@@ -424,7 +420,7 @@
 
           .p_title {
             text-align: center;
-            font-family: "Roboto", Sans-serif;
+            font-family: "Poppins" !important;
             font-size: 12px;
             font-weight: 400;
             color: #4a4a4a;
@@ -468,7 +464,7 @@
           }
 
           span {
-            font-family: "Roboto";
+            font-family: "Poppins" !important;
             font-weight: 400;
             font-size: 11px;
             margin-left: 10px;
@@ -506,7 +502,7 @@
       border: 1px solid #d8d8d8;
 
       .tab {
-        font-family: "Work Sans", Sans-serif;
+        font-family: "Poppins" !important;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -528,7 +524,7 @@
           border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
           padding: 1em 2em 1em 3.5em;
 
-          font-family: "Work Sans", Sans-serif;
+          font-family: "Poppins" !important;
           font-size: 14px;
           font-weight: 500;
         }
@@ -541,17 +537,16 @@
           margin-bottom: 15px;
           border-style: solid;
           border-width: 1px 1px 1px 1px;
-          border-color: #D8D8D8;
+          border-color: #d8d8d8;
           border-radius: 10px !important;
           padding: 0.9em 1.618em 0.3em;
           background-color: #fcfcfc;
 
-          font-family: 'Roboto';
+          font-family: "Poppins" !important;
           font-weight: 300;
           color: #333333;
           font-size: 14px;
           line-height: 20px;
-
 
           .head {
             display: flex;
@@ -559,7 +554,6 @@
             margin-bottom: 14px;
 
             .title {
-
               font-style: italic;
             }
 
@@ -582,7 +576,6 @@
             margin-bottom: 10px;
           }
         }
-
       }
     }
 
@@ -596,7 +589,7 @@
       border: 1px solid #d8d8d8;
 
       .tab {
-        font-family: "Work Sans", Sans-serif;
+        font-family: "Poppins" !important;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -612,7 +605,7 @@
 
         .sub-title {
           margin-bottom: 5px;
-          font-family: "Roboto";
+          font-family: "Poppins" !important;
           font-weight: 300;
           font-size: 13px;
           line-height: 1.42857143;
@@ -655,7 +648,7 @@
           box-shadow: inset 0 1px 1px rgb(0 0 0 / 13%);
           outline: none;
 
-          font-family: "Roboto";
+          font-family: "Poppins" !important;
           font-weight: 300;
           font-size: 13px;
           line-height: 1.42857143;
@@ -665,7 +658,7 @@
         .btn-submit {
           margin-top: 5px;
           cursor: pointer;
-          font-family: "Roboto";
+          font-family: "Poppins" !important;
           font-weight: 400;
           font-size: 11px;
 
@@ -709,7 +702,6 @@
     .product-view-desc-section {
       .product-view {
         .tab-wrapper {
-
           .btn-image-view,
           .active {
             width: auto;
@@ -838,7 +830,6 @@
     }
 
     .product-review-section {
-
       .product-reivew {
         .tab {
           padding: 15px 20px;
@@ -857,7 +848,7 @@
 
             .head {
               .title {
-                display: none
+                display: none;
               }
             }
           }
@@ -943,7 +934,6 @@
     }
 
     .related-product-section {
-
       .product-wrapper {
         grid-template-columns: repeat(1, 1fr);
       }

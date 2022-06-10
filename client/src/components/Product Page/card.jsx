@@ -119,15 +119,15 @@ const Card = ({ hit }) => {
                 <img src={emptyImage} alt="" />
               )}
             </div>
-            {/* <div className="p_title">
-              <Highlight attribute="post_title" tagName="mark" hit={hit} />
-            </div> */}
+          
           </div>
         </div>
 
         <div className="under-image-line">
         <img src={Line32} alt="" /></div>
-
+        <div className="p_title">
+              <Highlight attribute="post_title" tagName="mark" hit={hit} />
+            </div>
         <div className="brand">
           <img src={brand} alt="" />
         </div>
