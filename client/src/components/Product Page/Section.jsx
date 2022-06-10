@@ -10,14 +10,14 @@ const Section = (props) => {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse(config);
 
   return (
-    <div className="collapsible">
+    <div className="collapsible"> 
       <div className="section-header" {...getToggleProps()}>
         <div className="section-title">{props.title}</div>
         <div className="section-icon">
           {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
       </div>
-      <div {...getCollapseProps()}>
+      <div {...getCollapseProps()} >
         <div className="content">{props.children}</div>
       </div>
     </div>

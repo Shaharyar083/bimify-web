@@ -33,7 +33,9 @@ const Card = ({ hit }) => {
   const p_rating = useSelector((store) => store.product.productRatingAndReview);
   const toggleImage = useSelector((store) => store.product.toggleImage);
   const [showModal, setShowModal] = useState(false);
-
+  console.log("user", user)
+  console.log("p_rating", p_rating)
+  console.log("toggleImage", toggleImage)
   const handleCart = (product) => {
     if (accounts[0]) {
       let payload = {
@@ -82,17 +84,8 @@ const Card = ({ hit }) => {
 
 
         <div className="star">
-            {/* {[1, 2, 3, 4, 5].map((i) =>
-              i <=
-              p_rating.find((val) => val.productID === `${hit.post_id}`)
-                ?.rating ? ( */}
                 <FaStar color="#feb449"  />
                 <p>{p_rating[0]?.rating}</p>
-              {/* ) */}
-               {/* : (
-                {/* <FaRegStar key={i} /> */}
-              {/* ) */}
-            {/* )} } */}
           </div>
 
 

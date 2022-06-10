@@ -1,4 +1,20 @@
+.product-page
+  .main-container
+  .filter-wrapper
+  .category-search
+  .ais-Panel
+  .ais-HierarchicalMenu
+  .ais-HierarchicalMenu-list
+  .ais-HierarchicalMenu-link::before {
+  content: url("../../assets/images/other/arrowicon2.PNG") !important;
+  width: 10px !important;
+  position: relative !important;
+  top: 2px !important;
+}
 
+.ais-HierarchicalMenu-item--selected .ais-HierarchicalMenu-link::before {
+  transform: unset !important;
+}
 .arrownexttwo {
   position: relative;
   width: 40px;
@@ -11,7 +27,6 @@
   height: 15px;
   width: 10px;
 }
-
 
 .arrownexttwotwo {
   position: relative;
