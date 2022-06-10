@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setSearch, setCategory } from "../../redux/reducers/product-reducer";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // conponents
 import MenuLink from "./MenuLink";
@@ -13,8 +14,11 @@ import { CATEGORY } from "../../constants/category";
 
 // images
 import downIcon from "../../assets/images/navbar/down-icon.png";
+import { FaSearch } from "react-icons/fa";
 
 const CategoryDropDown = () => {
+  const { t, i18n } = useTranslation();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,12 +26,21 @@ const CategoryDropDown = () => {
   const dropDownRef = useRef(null);
 
   const [dropDown, setDropDown] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [input, setInput] = useState("");
 
   const handleCategory = (name) => {
     dispatch(setCategory(name));
     if (location.pathname != "/product") {
       navigate("/product");
     }
+
+    dispatch(setSearch(input));
+    navigate("/product");
+  };
+
+  const handleAlgoliaSearch = () => {
+    if (selectedCategory) handleCategory(selectedCategory);
   };
 
   const sortCategory = (a, b) => {
@@ -56,25 +69,42 @@ const CategoryDropDown = () => {
   }, [dropDownRef]);
 
   return (
-    <div
-      className="categories"
-      ref={dropDownRef}
-      onClick={() => setDropDown(!dropDown)}
-    >
-      <div className="text">Categories</div>
-      <img src={downIcon} alt="" className="down-icon" />
+    <>
+      <div
+        className="categories"
+        ref={dropDownRef}
+        onClick={() => setDropDown(!dropDown)}
+      >
+        <div className="text">Categories</div>
+        <img src={downIcon} alt="" className="down-icon" />
 
-      <div className={dropDown ? "drop-down-open" : "drop-down-close"}>
-        {[...CATEGORY].sort(sortCategory).map((data, idx) => (
-          <MenuLink
-            icon={data.icon}
-            label={data.label}
-            key={idx}
-            onClick={() => handleCategory(data.label)}
-          />
-        ))}
+        <div className={dropDown ? "drop-down-open" : "drop-down-close"}>
+          {[...CATEGORY].sort(sortCategory).map((data, idx) => (
+            <MenuLink
+              icon={data.icon}
+              label={data.label}
+              key={idx}
+              // onClick={() => handleCategory(data.label)}
+              onClick={() => setSelectedCategory(data.label)}
+              active={selectedCategory}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className="search-filter">
+        <input
+          type="text"
+          placeholder={t("search-input.1")}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+
+        <div className="icon" onClick={handleAlgoliaSearch}>
+          <FaSearch />
+        </div>
+      </div>
+    </>
   );
 };
 

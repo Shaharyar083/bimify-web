@@ -1,8 +1,11 @@
 import React from "react";
 
-const MenuLink = ({ icon, label, onClick }) => {
+const MenuLink = ({ icon, active, label, onClick }) => {
   return (
-    <div className="menu-link" onClick={onClick}>
+    <div
+      className={active === label ? "menu-link active" : "menu-link"}
+      onClick={onClick}
+    >
       <img src={icon} alt="" />
       <div className="label">{label}</div>
     </div>

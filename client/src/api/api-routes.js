@@ -1,4 +1,5 @@
-const SERVER_URL = "https://bimify-web-server.herokuapp.com";
+// const SERVER_URL = "https://bimify-web-server.herokuapp.com";
+const SERVER_URL = "https://bimify-algolia.herokuapp.com";
 
 export const API = {
   getUserDetail: SERVER_URL + "/api/user/get",
