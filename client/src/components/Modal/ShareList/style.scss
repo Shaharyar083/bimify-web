@@ -1,0 +1,120 @@
+.share-modal-component {
+    .modal-dialog {
+        max-width: 1000px;
+        margin-top: 10vh;
+    }
+
+    .close-modal {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 20px;
+
+        .icon {
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+
+    .main-wrapper {
+        padding: 0px 40px 40px;
+
+        .header {
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #313133;
+        }
+
+        .search-user {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            overflow: hidden;
+
+            input {
+                width: 100%;
+                background: #f1f1f1;
+                outline: none;
+                border: none;
+                font-family: "Poppins", Sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 1em;
+            }
+
+            .icon {
+                cursor: pointer;
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: #fff;
+                background-color: #feb449;
+                border-color: #feb449;
+            }
+        }
+
+        .error {
+            color: red;
+            font-family: "Poppins", Sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .user-wrap {
+            margin: 40px 0 20px;
+            display: flex;
+            justify-content: space-between;
+
+            .detail {
+                display: flex;
+                flex-direction: column;
+
+                div {
+                    font-family: "Poppins";
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .share-btn {
+                cursor: pointer;
+                background-color: green;
+                height: max-content;
+                padding: 10px;
+                border-radius: 5px;
+                color: #fff
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .share-modal-component {
+        .modal-dialog {
+            margin: 10vh 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .share-modal-component {
+        .close-modal {
+            padding: 10px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .share-modal-component {
+        .close-modal {
+            padding: 10px;
+        }
+
+    }
+}

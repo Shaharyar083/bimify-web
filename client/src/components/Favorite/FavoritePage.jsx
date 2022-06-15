@@ -12,6 +12,7 @@ import { setUser } from "../../redux/reducers/user-reducer";
 import MoveBack from "../MoveBack Component";
 import FavoriteList from "./FavoriteList";
 import DownloadModal from "../Modal/Download";
+import ShareListModal from "../Modal/ShareList";
 
 // api's
 import { productToCart } from "../../api";
@@ -24,6 +25,7 @@ const FavoritePage = ({ cart, email, Loading }) => {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
 
+  const [shareModal, setShareModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState();
   const [image3D, setImage3D] = useState("");
@@ -97,6 +99,10 @@ const FavoritePage = ({ cart, email, Loading }) => {
             handleModalShow={handleModalShow}
           />
         </div>
+
+        <div className="share-list-btn" onClick={() => setShareModal(true)}>
+          Share my wishlist
+        </div>
       </div>
 
       <DownloadModal
@@ -104,6 +110,11 @@ const FavoritePage = ({ cart, email, Loading }) => {
         showModal={showModal}
         downloadObject={image3D}
         modalClose={handleModalClose}
+      />
+
+      <ShareListModal
+        shareModalOpen={shareModal}
+        shareModalClose={() => setShareModal(false)}
       />
     </>
   );

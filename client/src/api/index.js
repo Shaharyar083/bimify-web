@@ -79,11 +79,39 @@ const getReviewAndRating = (payload) => {
   });
 };
 
+const createUser = (payload) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(API.CREATE_USER, payload)
+      .then((res) => {
+        resolve(res.data);
+      })
+      .catch((err) => {
+        reject(err.response.data);
+      });
+  });
+};
+
+const shareListToFriend = (payload) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(API.SHARE_LIST_TO_FRIEND, payload)
+      .then((res) => {
+        resolve(res.data);
+      })
+      .catch((err) => {
+        reject(err.response.data);
+      });
+  });
+};
+
 export {
+  createUser,
   getUserDetail,
   productToCart,
   getProductBySlug,
   getProductByIDs,
   addReviewAndRating,
   getReviewAndRating,
+  shareListToFriend,
 };

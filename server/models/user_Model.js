@@ -13,6 +13,9 @@ const schema = new mongoose.Schema({
   cart: {
     type: Array,
   },
+  friendWishList: {
+    type: Array,
+  },
 });
 
 module.exports = mongoose.model("user", schema);

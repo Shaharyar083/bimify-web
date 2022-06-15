@@ -1,10 +1,37 @@
 const User_Modal = require("../models/user_Model");
 
+const userCreate = async (req, res) => {
+  try {
+    let { tenantId, name, email } = req.body;
+
+    let user = await User_Modal.findOne({ email });
+
+    if (!user) {
+      const data = User_Modal({
+        tenantId,
+        name,
+        email,
+      });
+
+      user = await data.save();
+    }
+
+    res.status(200).json({ data: user, message: "Success!" });
+  } catch (err) {
+    res.status(400).json({ err, message: "Server Error!" });
+  }
+};
+
 const getUser = async (req, res) => {
   try {
     let { email } = req.body;
     const user = await User_Modal.findOne({ email });
-    res.status(200).json({ user, message: "User details!" });
+
+    if (user) {
+      res.status(200).json({ user, userExist: true, message: "Success!" });
+    } else {
+      res.status(200).json({ userExist: false });
+    }
   } catch (err) {
     res.status(400).json({ err, message: "Server Error!" });
   }
@@ -15,20 +42,6 @@ const addtocart = async (req, res) => {
     let { tenantId, name, email, productID } = req.body;
 
     const user = await User_Modal.findOne({ email });
-
-    if (!user) {
-      const data = User_Modal({
-        tenantId,
-        name,
-        email,
-        cart: [productID],
-      });
-
-      const response = await data.save();
-      return res
-        .status(200)
-        .json({ user: response, message: "Product added to cart" });
-    }
 
     if (user.cart.includes(productID)) {
       const response = await User_Modal.findOneAndUpdate(
@@ -55,4 +68,19 @@ const addtocart = async (req, res) => {
   }
 };
 
-module.exports = { getUser, addtocart };
+const shareListToFriend = async (req, res) => {
+  try {
+    let { email, friendEmail, friendWishList } = req.body;
+
+    const user = await User_Modal.findOne({ email });
+
+    if (user.friendWishList.includes((ele) => ele.email === friendEmail)) {
+      return res.status(200).json({ message: "list already share" });
+    } else {
+      return res.status(200).json({ message: "list added" });
+    }
+  } catch (err) {
+    res.status(400).json({ err, message: "Server Error!" });
+  }
+};
+module.exports = { userCreate, getUser, addtocart, shareListToFriend };

@@ -19,7 +19,7 @@ import Product from "./pages/Product";
 import Blog from "./pages/Blog";
 
 // api's
-import { getUserDetail, getReviewAndRating } from "./api";
+import { createUser, getUserDetail, getReviewAndRating } from "./api";
 
 function App() {
   const { instance, accounts } = useMsal();
@@ -30,11 +30,16 @@ function App() {
   useEffect(async () => {
     if (accounts[0]) {
       try {
+        await createUser({
+          tenantId: accounts[0]?.localAccountId,
+          name: accounts[0]?.name,
+          email: accounts[0]?.username,
+        });
+
         let response = await getUserDetail({ email: accounts[0]?.username });
         dispatch(setUser(response.user));
       } catch (err) {
         dispatch(setUser({}));
-        console.log("App page user detail api error =>", err.message);
       }
     } else {
       dispatch(setUser({}));

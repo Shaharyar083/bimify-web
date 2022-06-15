@@ -107,7 +107,7 @@
     }
 
     .favorite-list {
-      margin-bottom: 15vh;
+      margin-bottom: 50px;
       padding: 0 20px;
       border: 1px solid rgba(196, 196, 196, .25);
       border-radius: 5px;
@@ -241,6 +241,25 @@
         text-align: center;
       }
     }
+
+
+  }
+
+  .share-list-btn {
+    margin-left: auto;
+    margin-bottom: 10vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 45px;
+
+    border-radius: 5px;
+    background-color: #f7a928;
+    color: #fff;
+    font-family: "Poppins";
   }
 }
 
