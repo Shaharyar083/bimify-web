@@ -66,6 +66,17 @@ const View2 = () => {
         </div>
 
         <div className="pulse3"></div>
+         <div className="h-show3" onClick={() => handleSearch("Armchair")}>
+          <div className="p-image">
+            <img src={chair} alt="" />
+          </div>
+
+          <div className="text">Armchair</div>
+
+          <div className="brand">
+            <img src={brand} alt="" />
+          </div>
+        </div>
 
         <div className="pulse4"></div>
         <div className="h-show4" onClick={() => handleSearch("Armchair")}>

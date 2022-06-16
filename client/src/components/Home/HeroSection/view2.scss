@@ -128,6 +128,7 @@
 
     .h-show1,
     .h-show2,
+    .h-show3,
     .h-show4 {
       cursor: pointer;
       position: absolute;
@@ -192,6 +193,10 @@
       top: 21.5%;
       right: 17%;
     }
+    .h-show3 {
+      top: 75.5% !important;
+      right: 10% !important;
+    }
 
     .h-show4 {
       top: 58%;
@@ -200,6 +205,7 @@
 
     .pulse1:hover + .h-show1,
     .pulse2:hover + .h-show2,
+    .pulse3:hover + .h-show3,
     .pulse4:hover + .h-show4 {
       display: flex;
     }
@@ -235,9 +241,6 @@
     .pulse3 {
       top: 73%;
       right: 26%;
-      background-color: #000;
-      border: solid 2px #fff;
-      animation: pulse2 2s infinite;
     }
 
     .pulse4 {
@@ -247,14 +250,10 @@
 
     .pulse1:hover,
     .pulse2:hover,
+    .pulse3:hover,
     .pulse4:hover {
       animation: none;
       border-color: #fff;
-    }
-
-    .pulse3:hover {
-      animation: none;
-      border-color: #313133;
     }
 
     @keyframes pulse {
@@ -340,7 +339,10 @@
         top: 21.5%;
         right: 30%;
       }
-
+      .h-show3 {
+        top: 21.5%;
+        right: 30%;
+      }
       .h-show4 {
         top: 58%;
         right: 8%;
@@ -381,7 +383,10 @@
         top: 21.5%;
         right: 21.5%;
       }
-
+      .h-show3 {
+        top: 73% !important;
+        right: 17.5% !important;
+      }
       .h-show4 {
         top: 72%;
         right: 2.5%;
@@ -419,6 +424,11 @@
       }
 
       .h-show2 {
+        top: 21.5%;
+        right: 13.5%;
+      }
+
+      .h-show3 {
         top: 21.5%;
         right: 13.5%;
       }
