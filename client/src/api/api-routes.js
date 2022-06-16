@@ -1,6 +1,6 @@
 // const SERVER_URL = "https://bimify-web-server.herokuapp.com";
-const SERVER_URL = "https://bimify-algolia.herokuapp.com";
-// const SERVER_URL = "http://localhost:5000";
+// const SERVER_URL = "https://bimify-algolia.herokuapp.com";
+const SERVER_URL = "http://localhost:5000";
 
 export const API = {
   // user

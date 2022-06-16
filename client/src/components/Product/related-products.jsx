@@ -131,6 +131,7 @@ const RelatedProducts = ({ relatedProductIDs }) => {
               relatedProduct.map((data, i) => {
                 return (
                   <div className=" p_card" key={i}>
+                  {console.log("MYDATA", data)}
                     <div className="p_header">
                       <div className="heart" onClick={() => handleCart(data)}>
                         {user?.cart?.includes(data?.id) ? (

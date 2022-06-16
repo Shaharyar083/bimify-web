@@ -47,7 +47,7 @@
           color: #fff;
 
           margin-bottom: 25px;
-          transition: all .1s ease-in-out;
+          transition: all 0.1s ease-in-out;
 
           &:hover {
             color: #feb449;
@@ -120,12 +120,16 @@
           font-size: 35px;
           color: #fff;
         }
+
+        .icon:hover {
+          color: #feb449;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   .footer-component {
     padding: 40px 20px;
 

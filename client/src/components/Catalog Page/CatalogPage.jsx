@@ -60,7 +60,7 @@ const CatalogPage = ({ product }) => {
         <div className="extra"></div>
       </div>
 
-      <div className="title-brand-wrapper">
+      <div className="title-brand-wrapper" >
         <div className="title">{product?.name}</div>
         <div className="brand">
           <img src={brand} alt="" />

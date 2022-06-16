@@ -11,6 +11,7 @@ import { Grid } from "@material-ui/core";
 import Line32 from "../../assets/images/other/Line32.png";
 import { Line } from "rc-progress";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import Swal from 'sweetalert2'
 
 const MessageBox = () => {
   const { t, i18n } = useTranslation();
@@ -59,6 +60,7 @@ const ProductReview = ({ productID }) => {
   const [starActive, setStarActive] = useState(0);
   const [review, setReview] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const Swal = require('sweetalert2')
 
   const reset = () => {
     setReview("");
@@ -70,7 +72,7 @@ const ProductReview = ({ productID }) => {
       let payload = {
         email: accounts[0]?.username,
         productID,
-        rating: starActive,
+        rating: starActive, 
         review,
       };
 
@@ -80,6 +82,11 @@ const ProductReview = ({ productID }) => {
         const response = await getReviewAndRating();
         dispatch(setRatingAndReview(response.data));
         setIsLoading(false);
+        Swal.fire(
+          'Review Submitted',
+          'Thank you for the feedback',
+          'success'
+        )
         reset();
       } catch (err) {
         setIsLoading(false);

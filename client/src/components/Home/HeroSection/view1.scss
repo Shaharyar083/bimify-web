@@ -29,14 +29,14 @@
 
         font-family: "Poppins" !important;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
         color: #313133;
       }
 
       .para {
         font-family: "Poppins" !important;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 1.8em;
         letter-spacing: 0.1px;
         color: #313133;
@@ -49,12 +49,12 @@
         cursor: pointer;
         font-family: "Poppins" !important;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         padding: 15px 30px;
         background-color: #313133;
         color: #fff;
         transition: all 0.3s ease-in-out;
-        border-radius: 3px;
+        border-radius: 5px;
 
         &:hover {
           background-color: #feb449;
@@ -98,7 +98,7 @@
         text-align: center;
         font-size: 12px;
         font-family: "Poppins" !important;
-        font-weight: 200;
+        font-weight: 400;
         line-height: 1.1;
         color: #313133;
         margin: 10px 3px;

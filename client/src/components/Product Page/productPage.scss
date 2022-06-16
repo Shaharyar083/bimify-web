@@ -1,3 +1,14 @@
+.product-page
+  .main-container
+  .filter-wrapper
+  .category-search
+  .ais-Panel
+  .ais-HierarchicalMenu
+  .ais-HierarchicalMenu-list
+  .ais-HierarchicalMenu-list--child {
+  padding-left: 20px !important;
+}
+
 .ais-Pagination-item--selected {
   background-color: rgba(196, 196, 196, 0.6) !important;
 }
@@ -68,7 +79,7 @@
 
     font-family: "Poppins" !important;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     color: #313133;
 
     display: flex;
@@ -98,7 +109,7 @@
       .text {
         font-family: "Poppins" !important;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         color: #313133;
         text-align: center;
         display: flex;
@@ -160,7 +171,8 @@
           color: #666666;
           border-radius: 4px;
           background-color: #fff;
-          border: 2px solid #121215;
+          border: none;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
           border-radius: 5px;
           height: 42px;
           outline: none;
@@ -232,7 +244,7 @@
                 width: 100%;
                 font-size: 14px !important;
                 font-family: "Poppins" !important;
-                font-weight: 200;
+                font-weight: 400;
                 color: black;
                 border-radius: 4px;
                 background-color: #fff;
@@ -256,7 +268,7 @@
               }
 
               .ais-RefinementList-noResults {
-                font-size: 12px !important;
+                font-size: 14px !important;
                 font-family: "Poppins" !important;
               }
             }
@@ -273,14 +285,14 @@
                 padding-bottom: 8px;
 
                 .ais-RefinementList-labelText {
-                  font-size: 12px !important;
+                  font-size: 14px !important;
                   font-family: "Poppins" !important;
                 }
 
                 .ais-Highlight,
                 .ais-Highlight-highlighted,
                 .ais-Highlight-nonHighlighted {
-                  font-size: 12px !important;
+                  font-size: 14px !important;
                   font-family: "Poppins" !important;
                 }
 
@@ -330,9 +342,12 @@
               .ais-HierarchicalMenu-link {
                 padding-bottom: 8px;
               }
+              .ais-HierarchicalMenu-link:hover {
+                color: #feb449;
+              }
 
               .ais-HierarchicalMenu-label {
-                font-size: 12px;
+                font-size: 14px;
                 font-family: "Poppins" !important;
               }
 
@@ -396,7 +411,7 @@
                 width: 100%;
                 font-size: 14px !important;
                 font-family: "Poppins" !important;
-                font-weight: 200;
+                font-size: 400;
                 color: black;
                 border-radius: 4px;
                 background-color: #fff;
@@ -420,7 +435,7 @@
               }
 
               .ais-RefinementList-noResults {
-                font-size: 12px !important;
+                font-size: 14px !important;
                 font-family: "Poppins" !important;
               }
             }
@@ -434,14 +449,14 @@
                 padding-bottom: 8px;
 
                 .ais-RefinementList-labelText {
-                  font-size: 12px !important;
+                  font-size: 14px !important;
                   font-family: "Poppins" !important;
                 }
 
                 .ais-Highlight,
                 .ais-Highlight-highlighted,
                 .ais-Highlight-nonHighlighted {
-                  font-size: 12px !important;
+                  font-size: 14px !important;
                   font-family: "Poppins" !important;
                 }
 
@@ -553,8 +568,8 @@
             color: #ffffff;
             text-shadow: 0px 0px 2px rgba(254, 180, 73, 0.1);
             margin-top: 1rem;
-            width: 200px;
-            height: 60px;
+            width: 160px;
+            height: 50px;
             filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.15));
             transition: all 0.3s ease-in-out;
 
@@ -628,11 +643,12 @@
 
           select {
             outline: none;
-            border-radius: 4px;
+            border-radius: 5px;
+            border: none;
             background: white;
-            border-color: #d8d8d8;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             vertical-align: middle;
-            padding: 10px 10px;
+            padding: 0px 10px;
             font-family: "Poppins" !important;
             font-style: normal;
             font-weight: 400;
@@ -642,12 +658,22 @@
             align-items: center;
             text-transform: capitalize;
             color: #313133;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            height: 45px;
+            width: 60%;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+            background-position: 100%;
+            background-repeat: no-repeat;
           }
 
           .show20 {
             margin-left: 20px;
-            padding: 10px 10px;
+            padding: 0px 10px;
             width: 120px;
+            @media screen and (max-width: 420px) {
+              margin-left: 0px;
+            }
           }
         }
 
@@ -660,7 +686,9 @@
 
           .pagination {
             margin-top: 20px;
-
+            @media screen and(max-width: 420px) {
+              margin-top: 0px;
+            }
             .ais-Pagination {
               margin-left: auto;
 
@@ -687,8 +715,10 @@
             justify-content: flex-end;
 
             @media screen and (max-width: 420px) {
-              justify-content: flex-start;
-              width: 60%;
+              justify-content: center;
+              width: 100%;
+              margin-top: -30px;
+              margin-bottom: 20px;
             }
           }
         }
@@ -881,13 +911,39 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
+  .product-page {
+    max-width: 90%;
+    margin-bottom: 80px;
+
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .ais-Hits-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: unset;
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          .p_card {
+            margin-right: 20px;
+            margin-bottom: 20px;
+            width: 300px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
   .product-page {
     .main-container {
       .product-section {
         .ais-Hits {
           .ais-Hits-list {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
           }
         }
       }
@@ -902,6 +958,47 @@
         .ais-Hits {
           .ais-Hits-list {
             grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1213px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .sort-section-wrapper {
+          display: flex;
+          flex-wrap: unset;
+          align-items: center;
+          padding-bottom: 10px;
+          margin-top: -18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .sort-section-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: unset;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 0px;
+          margin-top: 0px;
+          .pagination-wrapper {
+            display: unset;
+            align-items: unset;
+            justify-content: unset;
+            flex-direction: unset;
+            margin-right: 40px;
           }
         }
       }
@@ -973,15 +1070,12 @@
       .product-section {
         .pagination {
           .ais-Pagination {
-            margin: auto;
-
             .ais-Pagination-list {
-              padding: 20px;
+              padding: 0px 0px 20px 0px;
               display: flex;
-              // width: 80%;
               align-items: center;
               justify-content: center;
-              width: 94%;
+              width: 100%;
             }
           }
         }
@@ -1001,6 +1095,11 @@
         }
 
         .ais-Hits {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
           padding-left: 10px;
 
           .ais-Hits-list {

@@ -27,6 +27,7 @@ import {
   FaChevronRight,
   FaChevronLeft,
 } from "react-icons/fa";
+import {IoMdHeartEmpty, IoMdHeart} from 'react-icons/io'
 import boxIcon from "../../assets/images/icons/box-icon.png";
 import loaderImg from "../../assets/loader/bimroom-loader.svg";
 import emptyImage from "../../assets/empty-image.png";
@@ -236,9 +237,9 @@ const ProductView = ({ product }) => {
 
           <div className="heart" onClick={() => handleCart(product?.id)}>
             {user?.cart?.includes(product?.id) ? (
-              <FaHeart color="#337ab7" className="icon" />
+              <IoMdHeart color="#337ab7" className="icon" />
             ) : (
-              <FaRegHeart className="icon" />
+              <IoMdHeartEmpty className="icon" />
             )}
           </div>
 

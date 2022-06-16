@@ -43,6 +43,7 @@
     "sass": "^1.49.8",
     "search-insights": "^2.2.1",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.4.17",
     "three": "^0.138.3",
     "web-vitals": "^2.1.4"
   },

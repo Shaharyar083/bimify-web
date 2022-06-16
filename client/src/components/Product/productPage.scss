@@ -19,7 +19,7 @@
 
       font-family: "Poppins" !important;
       font-size: 17px;
-      font-weight: 300;
+      font-weight: 400;
       color: #313133;
 
       display: flex;
@@ -74,7 +74,7 @@
       color: #313133;
       font-family: "Poppins" !important;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     .brand {
@@ -112,7 +112,7 @@
           justify-content: center;
 
           background: #f5f5f5;
-          border-radius: 20px 20px 0 0;
+          border-radius: 10px 10px 0 0;
 
           font-family: "Poppins" !important;
           font-size: 16px;
@@ -126,8 +126,7 @@
         .active {
           background: #fff;
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-
-          font-weight: 700;
+          font-weight: 900;
         }
       }
 
@@ -224,9 +223,9 @@
 
         .heart {
           margin: 0 45px;
-          font-size: 35px;
+          font-size: 37px;
           cursor: pointer;
-          color: #423e3f;
+          color: #717171;
           transition: all 0.2s ease-in-out;
 
           .icon {
@@ -260,7 +259,7 @@
 
         font-family: "Poppins" !important;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 900;
         font-style: normal;
         letter-spacing: 0px;
 
@@ -291,16 +290,12 @@
 
       .tab {
         background: #f5f5f5;
-        border-radius: 20px 20px 0 0;
-
+        border-radius: 10px 10px 0 0;
         padding: 10px 25px;
-
         height: 46px;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
         font-family: "Poppins" !important;
         font-size: 16px;
         font-weight: 400;
@@ -315,7 +310,7 @@
       .active {
         background: #fff;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        font-weight: 700;
+        font-weight: 900;
       }
     }
 
@@ -330,7 +325,7 @@
       .table_title {
         font-family: "Poppins" !important;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 900;
         text-transform: uppercase;
         color: #313133;
       }
@@ -582,7 +577,7 @@
           .title {
             font-family: "Poppins" !important;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 900;
             font-size: 20px;
             line-height: 36px;
             display: flex;
@@ -626,7 +621,7 @@
           justify-content: center;
           font-family: "Poppins" !important;
           font-style: normal;
-          font-weight: 300;
+          font-weight: 400;
           font-size: 16px;
           line-height: 33px;
           display: flex;
@@ -820,7 +815,7 @@
             outline: none;
             margin-top: 30px;
             font-family: "Poppins" !important;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 14px;
             line-height: 1.42857143;
             color: #333;
@@ -844,7 +839,7 @@
 
               color: #fff;
               background: #313133;
-              border-radius: 6px;
+              border-radius: 5px;
               display: flex;
               align-items: center;
               justify-content: center;
