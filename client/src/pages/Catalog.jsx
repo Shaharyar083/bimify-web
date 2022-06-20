@@ -11,13 +11,18 @@ import { resetAllFilters } from "../redux/reducers/product-reducer";
 import Navbar from "../components/Navbar";
 import ProductPage from "../components/Product Page";
 import Footer from "../components/Footer";
+import withURLSync from "../components/Product Page/URLSync";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const searchClient = algoliasearch(
   "MLN6C7QSR3",
   "d5d83c9e0103cbfeef63fcd712daa7e3"
 );
 
-const Catalog = () => {
+const Catalog = (props) => {
+   const navigate = useNavigate()
+  const location = useLocation()
+  const [isBackButtonClicked, setBackbuttonPress] = useState(false)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -35,18 +40,36 @@ const Catalog = () => {
     };
   }, []);
 
+  // useEffect(() => {
+  //   window.history.pushState(null, null, document.URL);
+  //   window.addEventListener('popstate', function(event) {
+  //         window.location.replace(
+  //           `YOUR URL`
+  //         );
+  //   });
+  //     if( window.location.href !==  `http://localhost:3000${location.pathname}`){
+  //       navigate('/product')
+  //       console.log("BAD REQUEST")
+  //     }else{
+  //       console.log("LOCATION", `http://localhost:3000${location.pathname}`)
+  //       console.log("LOCATION", window.location.href)
+  //     }
+  //   // }
+  // }, [props.searchState.query])
+
+
+
+
+
   return (
     <>
       <Navbar />
       <InstantSearch
         indexName={"wp_posts_product"}
         searchClient={searchClient}
-        // searchState={{
-        //   query: "iphone",
-        //   refinementList: {
-        //     brand: ["Furniture"],
-        //   },
-        // }}
+        searchState={props.searchState}
+        createURL={props.createURL}
+        onSearchStateChange={props.onSearchStateChange}
       >
         <ProductPage />
       </InstantSearch>
@@ -55,4 +78,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default withURLSync(Catalog);

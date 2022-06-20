@@ -7,7 +7,7 @@ const schema = new mongoose.Schema({
   productID: {
     type: String,
   },
-  rating: {
+  rating: { 
     type: Number,
     default: 0,
   },

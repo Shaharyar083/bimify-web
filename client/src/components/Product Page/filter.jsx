@@ -34,13 +34,10 @@ const Filter = () => {
         <ToggleSwitch />
       </div>
       <div className="text mt-2">{t("product.34")}</div>
-
       <div className="text mt-3">{t("product.6")}</div>
-
       <div className="input-search">
         <CustomAlgoliaSearch defaultRefinement={searched} />
       </div>
-
       <div className="category-search">
         <Section title="Category" defaultExpanded={true}>
           <Panel>
