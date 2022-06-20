@@ -6,10 +6,11 @@ import {
   AuthenticatedTemplate,
   UnauthenticatedTemplate,
 } from "@azure/msal-react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../redux/reducers/user-reducer";
 
 // api's
-import { getProductByIDs } from "../api";
+import { getProductByIDs, getUserDetail } from "../api";
 
 // component's
 import Navbar from "../components/Navbar";
@@ -18,6 +19,7 @@ import Footer from "../components/Footer";
 import Loader from "../components/Loader";
 
 const Favorite = () => {
+  const dispatch = useDispatch();
   let { accounts } = useMsal();
 
   const user = useSelector((store) => store.user.user);
@@ -42,6 +44,17 @@ const Favorite = () => {
       setLoading(false);
     }
   }, [accounts[0], user]);
+
+  const fetchUser = async () => {
+    let response = await getUserDetail({ email: accounts[0]?.username });
+    dispatch(setUser(response.user));
+  };
+
+  useEffect(() => {
+    if (accounts[0]) {
+      fetchUser();
+    }
+  }, [accounts[0]]);
 
   useEffect(() => {
     TagManager.dataLayer({

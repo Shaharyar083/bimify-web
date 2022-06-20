@@ -4,6 +4,7 @@ import "./style.scss";
 // packages
 import { Modal } from "react-bootstrap";
 import { useMsal } from "@azure/msal-react";
+import { useSelector } from "react-redux";
 
 // api's
 import { getUserDetail, shareListToFriend } from "../../../api/index";
@@ -15,12 +16,14 @@ import { FaSearch } from "react-icons/fa";
 const ShareListModal = ({ shareModalOpen, shareModalClose }) => {
   let { accounts } = useMsal();
 
+  const user = useSelector((store) => store.user.user);
+
   const [input, setInput] = React.useState("");
-  const [user, setUser] = React.useState({});
+  const [friend, setFirend] = React.useState({});
   const [err, setError] = React.useState("");
 
   const closeModal = () => {
-    setUser({});
+    setFirend({});
     setInput("");
     setError("");
     shareModalClose();
@@ -30,7 +33,7 @@ const ShareListModal = ({ shareModalOpen, shareModalClose }) => {
     const res = await getUserDetail({ email: input });
 
     if (res?.userExist) {
-      setUser(res?.user);
+      setFirend(res?.user);
       setError("");
     } else {
       setError("User not found!");
@@ -39,8 +42,9 @@ const ShareListModal = ({ shareModalOpen, shareModalClose }) => {
 
   const shareList = async () => {
     const res = await shareListToFriend({
-      email: user?.email,
-      friendEmail: accounts[0].username,
+      email: accounts[0].username,
+      myCart: user?.cart,
+      friendEmail: friend?.email,
     });
     alert(res.message);
   };
@@ -72,14 +76,14 @@ const ShareListModal = ({ shareModalOpen, shareModalClose }) => {
 
         {err && <div className="error">{err}</div>}
 
-        {Object.keys(user).length > 0 && (
+        {Object.keys(friend).length > 0 && (
           <div className="user-wrap">
             <div className="detail">
               <div>
-                <span>Name:</span> {user?.name}
+                <span>Name:</span> {friend?.name}
               </div>
               <div>
-                <span>Email:</span> {user?.email}
+                <span>Email:</span> {friend?.email}
               </div>
             </div>
 
