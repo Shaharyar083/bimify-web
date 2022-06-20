@@ -11,6 +11,7 @@ import { setUser } from "../../redux/reducers/user-reducer";
 // component's
 import MoveBack from "../MoveBack Component";
 import FavoriteList from "./FavoriteList";
+import FriendFavoriteList from "./FriendFavoriteList";
 import DownloadModal from "../Modal/Download";
 import ShareListModal from "../Modal/ShareList";
 
@@ -25,6 +26,7 @@ const FavoritePage = ({ cart, email, Loading }) => {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
 
+  const [view, setView] = useState(1);
   const [shareModal, setShareModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState();
@@ -79,8 +81,18 @@ const FavoritePage = ({ cart, email, Loading }) => {
 
         <div className="main-wrapper">
           <div className="tabs-wrapper">
-            <div className="tab tab-active">
+            <div
+              className={view === 1 ? "tab tab-active" : "tab"}
+              onClick={() => setView(1)}
+            >
               <span>Favorites</span>
+            </div>
+
+            <div
+              className={view === 2 ? "tab tab-active" : "tab"}
+              onClick={() => setView(2)}
+            >
+              <span>Friend Wishlist</span>
             </div>
 
             <div className="tab">
@@ -93,11 +105,21 @@ const FavoritePage = ({ cart, email, Loading }) => {
             </div>
           </div>
 
-          <FavoriteList
-            cart={cart}
-            handleCart={handleCart}
-            handleModalShow={handleModalShow}
-          />
+          {view === 1 && (
+            <FavoriteList
+              cart={cart}
+              handleCart={handleCart}
+              handleModalShow={handleModalShow}
+            />
+          )}
+
+          {view === 2 && (
+            <FriendFavoriteList
+              cart={cart}
+              handleCart={handleCart}
+              handleModalShow={handleModalShow}
+            />
+          )}
         </div>
 
         <div className="share-list-btn" onClick={() => setShareModal(true)}>

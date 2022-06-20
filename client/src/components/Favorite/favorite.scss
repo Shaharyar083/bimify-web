@@ -261,6 +261,27 @@
     color: #fff;
     font-family: "Poppins";
   }
+
+  .show-friend-btn {
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f7a928;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 12px;
+
+    width: max-content;
+
+    span {
+      margin-right: 10px;
+    }
+  }
 }
 
 @media screen and (max-width: 1420px) {

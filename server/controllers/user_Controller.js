@@ -70,14 +70,49 @@ const addtocart = async (req, res) => {
 
 const shareListToFriend = async (req, res) => {
   try {
-    let { email, friendEmail, friendWishList } = req.body;
+    let { email, myCart, friendEmail } = req.body;
 
-    const user = await User_Modal.findOne({ email });
+    const friend = await User_Modal.findOne({ email: friendEmail });
+    const listAlreadyShare = friend.friendWishList.filter(
+      (ele) => ele.email === email
+    );
 
-    if (user.friendWishList.includes((ele) => ele.email === friendEmail)) {
-      return res.status(200).json({ message: "list already share" });
+    if (listAlreadyShare.length) {
+      let temp = friend?.friendWishList?.map((ele) => {
+        if (ele.email === email) {
+          return {
+            email,
+            list: myCart,
+          };
+        } else {
+          return ele;
+        }
+      });
+
+      await User_Modal.findOneAndUpdate(
+        { email: friendEmail },
+        { friendWishList: temp },
+        { new: true }
+      );
+      return res
+        .status(200)
+        .json({ message: "List already share and updated!" });
     } else {
-      return res.status(200).json({ message: "list added" });
+      let temp = [
+        ...friend.friendWishList,
+        {
+          email,
+          list: myCart,
+        },
+      ];
+
+      await User_Modal.findOneAndUpdate(
+        { email: friendEmail },
+        { friendWishList: temp },
+        { new: true }
+      );
+
+      return res.status(200).json({ message: "WishList shared!" });
     }
   } catch (err) {
     res.status(400).json({ err, message: "Server Error!" });
