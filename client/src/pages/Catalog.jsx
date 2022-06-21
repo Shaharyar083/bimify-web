@@ -53,8 +53,8 @@ const Catalog = (props) => {
     if (!isBackButtonClicked) {
         setBackbuttonPress(true)
         window.location.replace(
-          `http://localhost:3000/`
-          // `https://bimify-web.netlify.app/`
+          // `http://localhost:3000/`
+          `https://bimify-web.netlify.app/`
         );
     }
   }

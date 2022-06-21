@@ -52,8 +52,8 @@ const Product = () => {
     if (!isBackButtonClicked) {
         setBackbuttonPress(true)
         window.location.replace(
-          `http://localhost:3000/product`
-          // `https://bimify-web.netlify.app/product`
+          // `http://localhost:3000/product`
+          `https://bimify-web.netlify.app/product`
         );
     }
   }
