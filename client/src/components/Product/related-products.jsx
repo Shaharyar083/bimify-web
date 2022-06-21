@@ -8,7 +8,7 @@ import TagManager from "react-gtm-module";
 import ModalComponent from "../Modal/Modal";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -131,7 +131,7 @@ const RelatedProducts = ({ relatedProductIDs }) => {
               relatedProduct.map((data, i) => {
                 return (
                   <div className=" p_card" key={i}>
-                  {console.log("MYDATA", data)}
+                    {console.log("MYDATA", data)}
                     <div className="p_header">
                       <div className="heart" onClick={() => handleCart(data)}>
                         {user?.cart?.includes(data?.id) ? (
@@ -142,11 +142,13 @@ const RelatedProducts = ({ relatedProductIDs }) => {
                       </div>
                     </div>
                     <Link to={`/product/${data.slug}`} className="p_body">
-                    <div className="p_body">
-                      <div className="thumbnail">
-                        <img src={data.images[0]?.src} alt="" />
+                      <div className="p_body">
+                        <div className="thumbnail">
+                          <img src={data.images[0]?.src} alt="" />
+                        </div>
+
+                        <div className="p_title">{data.name}</div>
                       </div>
-                    </div>
                     </Link>
                   </div>
                 );
