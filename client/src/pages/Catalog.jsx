@@ -39,28 +39,7 @@ const Catalog = (props) => {
       dispatch(resetAllFilters());
     };
   }, []);
-
-  // useEffect(() => {
-  //   window.history.pushState(null, null, document.URL);
-  //   window.addEventListener('popstate', function(event) {
-  //         window.location.replace(
-  //           `YOUR URL`
-  //         );
-  //   });
-  //     if( window.location.href !==  `http://localhost:3000${location.pathname}`){
-  //       navigate('/product')
-  //       console.log("BAD REQUEST")
-  //     }else{
-  //       console.log("LOCATION", `http://localhost:3000${location.pathname}`)
-  //       console.log("LOCATION", window.location.href)
-  //     }
-  //   // }
-  // }, [props.searchState.query])
-
-
-
-
-
+  
   return (
     <>
       <Navbar />

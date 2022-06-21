@@ -19,10 +19,7 @@ const Product = () => {
   const navigate = useNavigate();
   const [isBackButtonClicked, setBackbuttonPress] = useState(false)
   const slug = location.pathname.split("/product/");
-
   const [product, setProduct] = useState([]);
-
-  console.log("slug", slug[1].split("/")[0]);
 
   useEffect(() => {
     setProduct([]);
