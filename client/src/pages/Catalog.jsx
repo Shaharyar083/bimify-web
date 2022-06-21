@@ -39,7 +39,26 @@ const Catalog = (props) => {
       dispatch(resetAllFilters());
     };
   }, []);
-  
+
+
+  useEffect(() => {
+    window.history.pushState(null, null, window.location.pathname);
+    window.addEventListener('popstate', onBackButtonEvent);
+    return () => {
+      window.removeEventListener('popstate', onBackButtonEvent);
+    }
+  }, []);
+  const onBackButtonEvent = (e) => {
+    e.preventDefault();
+    if (!isBackButtonClicked) {
+        setBackbuttonPress(true)
+        window.location.replace(
+          `http://localhost:3000/`
+        );
+    }
+  }
+
+
   return (
     <>
       <Navbar />
