@@ -15,7 +15,8 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://bimify-web.netlify.app/",
+    // origin: "https://bimify-web.netlify.app/",
+    origin:"*",
     credentials: true,
   })
 );
