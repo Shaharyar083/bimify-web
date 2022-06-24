@@ -31,6 +31,8 @@ import {IoMdHeartEmpty, IoMdHeart} from 'react-icons/io'
 import boxIcon from "../../assets/images/icons/box-icon.png";
 import loaderImg from "../../assets/loader/bimroom-loader.svg";
 import emptyImage from "../../assets/empty-image.png";
+import like from '../../assets/images/other/like.svg'
+import collection from '../../assets/images/other/collection.svg'
 
 const tabArray = [
   { name: "Render" },
@@ -237,14 +239,15 @@ const ProductView = ({ product }) => {
 
           <div className="heart" onClick={() => handleCart(product?.id)}>
             {user?.cart?.includes(product?.id) ? (
+           
               <IoMdHeart color="#337ab7" className="icon" />
             ) : (
-              <IoMdHeartEmpty className="icon" />
+              <img src={like} alt="" className="likeicon"/>
             )}
           </div>
 
           <div className="box">
-            <img src={boxIcon} alt="" />
+          <img src={collection} alt="" className="boxicon"/>
           </div>
         </div>
       </div>

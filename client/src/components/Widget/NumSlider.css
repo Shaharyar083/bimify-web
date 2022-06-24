@@ -12,9 +12,9 @@
   top: 2px !important;
 }
 
-.ais-HierarchicalMenu-item--selected .ais-HierarchicalMenu-link::before {
+/* .ais-HierarchicalMenu-item--selected .ais-HierarchicalMenu-link::before {
   transform: unset !important;
-}
+} */
 .arrownexttwo {
   position: relative;
   width: 40px;

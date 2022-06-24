@@ -12,7 +12,10 @@ import pic4 from "../../../assets/images/home/pic4.png";
 import forwardIcon from "../../../assets/images/icons/forward-icon.png";
 import brand from "../../../assets/images/modal/brand.png";
 
+import { useNavigate } from "react-router-dom";
+
 const FeaturedObjects = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-featured-section">
       <div className="main-title">Featured Products</div>
@@ -31,7 +34,9 @@ const FeaturedObjects = () => {
             </div>
 
             <div className="view">
-              <div className="text">View More</div>
+              <div className="text" onClick={() => navigate("/product")}>
+                View More
+              </div>
               <img src={forwardIcon} alt="" />
             </div>
           </div>
@@ -43,7 +48,9 @@ const FeaturedObjects = () => {
               <div className="title">New BIM objects</div>
 
               <div className="view">
-                <div className="text">View More</div>
+                <div className="text" onClick={() => navigate("/product")}>
+                  View More
+                </div>
                 <img src={forwardIcon} alt="" />
               </div>
             </div>
@@ -64,7 +71,9 @@ const FeaturedObjects = () => {
               </div>
 
               <div className="view">
-                <div className="text">View More</div>
+                <div className="text" onClick={() => navigate("/product")}>
+                  View More
+                </div>
                 <img src={forwardIcon} alt="" />
               </div>
             </div>
@@ -79,7 +88,9 @@ const FeaturedObjects = () => {
               </div>
 
               <div className="view">
-                <div className="text">View More</div>
+                <div className="text" onClick={() => navigate("/product")}>
+                  View More
+                </div>
                 <img src={forwardIcon} alt="" />
               </div>
             </div>

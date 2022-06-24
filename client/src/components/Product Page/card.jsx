@@ -85,7 +85,7 @@ const Card = ({ hit }) => {
               p_rating.find((val) => val.productID === `${hit.post_id}`)
                 ?.rating ? ( */}
             <FaStar color="#feb449" />
-            <p>{p_rating[0]?.rating}</p>
+            <p>{(p_rating[0]?.rating)?.toFixed(2)}</p>
             {/* ) */}
             {/* : (
                 {/* <FaRegStar key={i} /> */}

@@ -8,10 +8,22 @@ import {
   CustomCurrentRefinements,
 } from "../Widget";
 
+import Select from 'react-select';
+
 import { useTranslation } from "react-i18next";
 
 const Product = () => {
   const { t, i18n } = useTranslation();
+  const [selectedOption, setSelectedOption] = React.useState();
+  const options = [
+    { value: t("product.12"), label:t("product.12") },
+    { value: t("product.13"), label: t("product.13") },
+    { value: t("product.14"), label: t("product.14") },
+  ];
+
+  const options2 = [
+    { value: t("product.33"), label: t("product.33")},
+  ];
   return (
     <div className="product-section">
       {/* <div className="refine-tag-wrapper">
@@ -19,16 +31,27 @@ const Product = () => {
       </div> */}
       <div className="sort-section-wrapper">
       <div className="sort-section">
-        <select>
+      <Select
+           defaultValue={selectedOption ? selectedOption : {label: "Default Sorting", value: "Default Sorting"} }
+        onChange={setSelectedOption}
+        options={options}
+        className="select"
+        isSearchable={false}
+      />
+        {/* <select>
           <option>{t("product.11")}</option>
           <option>{t("product.12")}</option>
           <option>{t("product.13")}</option>
           <option>{t("product.14")}</option>
-        </select>
+        </select> */}
 
-        <select className="show20">
-          <option>{t("product.33")}</option>
-        </select>
+        <Select
+        // defaultValue={{label: "Choose one", value: ""}}
+        defaultValue={selectedOption ? selectedOption : {label: "Show 20", value: "Show 20"} }
+        onChange={setSelectedOption}
+        options={options2}
+        className="show20"  isSearchable={false}
+      />
       </div>
 
        <div className="pagination-wrapper">

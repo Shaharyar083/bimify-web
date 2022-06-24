@@ -53,7 +53,7 @@ const Product = () => {
         setBackbuttonPress(true)
         window.location.replace(
           // `http://localhost:3000/product`
-          `https://bimifyalgolia.netlify.app/`
+          `https://bimifyalgolia.netlify.app/product`
         );
     }
   }
