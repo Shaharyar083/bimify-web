@@ -61,7 +61,7 @@ const CustomCurrentRefinements = connectCurrentRefinements(
       <>
         {list?.length > 0 &&
           list?.map((data, idx) => (
-            <div className="tags" key={idx}>
+            <div className="tags" key={idx} style={{marginLeft: idx > 0 && "10px"}}>
               <div className="label">{data?.label}</div>
               <ImCross
                 className="cancel"

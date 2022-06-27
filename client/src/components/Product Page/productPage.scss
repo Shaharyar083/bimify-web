@@ -920,7 +920,7 @@
           .p_card {
             margin-right: 20px;
             margin-bottom: 20px;
-            width: 200px;
+            width: 250px;
           }
         }
       }
@@ -944,15 +944,33 @@
           }
 
           .p_card {
-            margin-right: 20px;
+            margin-right: 10px;
             margin-bottom: 20px;
-            width: 300px !important;
+            width: 280px !important;
           }
         }
       }
     }
   }
 }
+
+
+@media screen and (max-width: 1355px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .p_card {
+            margin-right: 10px;
+            width: 240px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 1250px) {
   .product-page {
@@ -967,6 +985,99 @@
     }
   }
 }
+
+
+
+@media screen and (max-width: 1160px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .p_card {
+            margin-right: 10px;
+            width: 200px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1088px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .p_card {
+            margin-right: 10px;
+            width: 260px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 649px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .p_card {
+            margin-left: 60px;
+            margin-right: 0px;
+            width: 320px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 490px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .p_card {
+            margin-left: 20px;
+            margin-right: 0px;
+            width: 320px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 420px) {
+  .product-page {
+    .main-container {
+      .product-section {
+        .ais-Hits {
+          .p_card {
+            margin-left: 0px;
+            margin-right: 10px;
+            width: 300px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 
 @media screen and (max-width: 1200px) {
   .product-page {

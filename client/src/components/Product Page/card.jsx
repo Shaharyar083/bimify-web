@@ -80,19 +80,9 @@ const Card = ({ hit }) => {
       <div className="p_card">
         <div className="p_header">
           <div className="star">
-            {/* {[1, 2, 3, 4, 5].map((i) =>
-              i <=
-              p_rating.find((val) => val.productID === `${hit.post_id}`)
-                ?.rating ? ( */}
             <FaStar color="#feb449" />
-            <p>{(p_rating[0]?.rating)?.toFixed(2)}</p>
-            {/* ) */}
-            {/* : (
-                {/* <FaRegStar key={i} /> */}
-            {/* ) */}
-            {/* )} } */}
+            <p>{(p_rating[0]?.rating)?.toFixed(1)}</p>
           </div>
-
           <div className="heart" onClick={() => handleCart(hit)}>
             {user?.cart?.includes(hit?.post_id) ? (
               <FaHeart color="#337ab7" />
