@@ -66,6 +66,19 @@ function App() {
     }
   }, [location?.pathname]);
 
+  useEffect(() => {
+    if (window.performance) {
+      if (performance.getEntriesByType("navigation")) {
+        if (location.pathname.includes("/productsearch")) {
+          window.location.replace(
+            // 'http://localhost:3000/product'
+            `https://bimifyalgolia.netlify.app/product`
+          );
+        }
+      }
+    }
+  }, []);
+
   return (
     <>
       <Routes>

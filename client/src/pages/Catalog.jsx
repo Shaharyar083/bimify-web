@@ -20,9 +20,9 @@ const searchClient = algoliasearch(
 );
 
 const Catalog = (props) => {
-   const navigate = useNavigate()
-  const location = useLocation()
-  const [isBackButtonClicked, setBackbuttonPress] = useState(false)
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [isBackButtonClicked, setBackbuttonPress] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -40,24 +40,24 @@ const Catalog = (props) => {
     };
   }, []);
 
-
   useEffect(() => {
     window.history.pushState(null, null, window.location.pathname);
-    window.addEventListener('popstate', onBackButtonEvent);
+    window.addEventListener("popstate", onBackButtonEvent);
     return () => {
-      window.removeEventListener('popstate', onBackButtonEvent);
-    }
+      window.removeEventListener("popstate", onBackButtonEvent);
+    };
   }, []);
   const onBackButtonEvent = (e) => {
     e.preventDefault();
     if (!isBackButtonClicked) {
-        setBackbuttonPress(true)
-        window.location.replace(
-          // `http://localhost:3000/`
-          `https://bimifyalgolia.netlify.app/`
-        );
+      setBackbuttonPress(true);
+      window.location.replace(
+        // `http://localhost:3000/`
+        `https://bimifyalgolia.netlify.app/`
+      );
     }
-  }
+  };
+
 
 
   return (

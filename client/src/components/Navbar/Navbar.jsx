@@ -12,10 +12,12 @@ import CategoryDropDown from "./CategoryDropDown";
 import ProjectDropDown from "./ProjectDropDown";
 import ProfileDropDown from "./ProfileDropDown";
 
+
 // images & icons
 import { FaSearch } from "react-icons/fa";
 import logo from "../../assets/images/navbar/logo.png";
 import AccountModal from "../Modal/Account";
+import bimroomlogoorange from '../../assets/images/home/bimroomlogoorange.svg'
 
 function handleLogin(instance) {
   instance.loginPopup(loginRequest).catch((e) => {
@@ -44,7 +46,7 @@ const Navbar = () => {
       <div className="navbar-component">
         <div className="main-container">
           <Link to="/" className="logo">
-            <img src={logo} alt="" />
+            <img src={bimroomlogoorange} alt="" />
           </Link>
 
           <div className="center">

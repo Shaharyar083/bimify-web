@@ -41,6 +41,8 @@ const CategoryDropDown = () => {
 
   const handleAlgoliaSearch = () => {
     if (selectedCategory) handleCategory(selectedCategory);
+    dispatch(setSearch(input));
+    navigate("/product");
   };
 
   const sortCategory = (a, b) => {
@@ -75,7 +77,9 @@ const CategoryDropDown = () => {
         ref={dropDownRef}
         onClick={() => setDropDown(!dropDown)}
       >
-        <div className="text">Categories</div>
+        <div className="text">{
+          selectedCategory ? selectedCategory : "Categories"
+        }</div>
         <img src={downIcon} alt="" className="down-icon" />
 
         <div className={dropDown ? "drop-down-open" : "drop-down-close"}>
