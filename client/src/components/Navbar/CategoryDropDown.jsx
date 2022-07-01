@@ -34,12 +34,12 @@ const CategoryDropDown = () => {
     if (location.pathname != "/product") {
       navigate("/product");
     }
-
     dispatch(setSearch(input));
     navigate("/product");
   };
 
-  const handleAlgoliaSearch = () => {
+  const handleAlgoliaSearch = (e) => {
+    e.preventDefault();
     if (selectedCategory) handleCategory(selectedCategory);
     dispatch(setSearch(input));
     navigate("/product");
@@ -77,9 +77,9 @@ const CategoryDropDown = () => {
         ref={dropDownRef}
         onClick={() => setDropDown(!dropDown)}
       >
-        <div className="text">{
-          selectedCategory ? selectedCategory : "Categories"
-        }</div>
+        <div className="text">
+          {selectedCategory ? selectedCategory : "Categories"}
+        </div>
         <img src={downIcon} alt="" className="down-icon" />
 
         <div className={dropDown ? "drop-down-open" : "drop-down-close"}>
@@ -95,19 +95,20 @@ const CategoryDropDown = () => {
           ))}
         </div>
       </div>
+      <form action="" onSubmit={(e) => handleAlgoliaSearch(e)}>
+        <div className="search-filter">
+          <input
+            type="text"
+            placeholder={t("search-input.1")}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
 
-      <div className="search-filter">
-        <input
-          type="text"
-          placeholder={t("search-input.1")}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-
-        <div className="icon" onClick={handleAlgoliaSearch}>
-          <FaSearch />
+          <div className="icon" onClick={(e) => handleAlgoliaSearch(e)}>
+            <FaSearch />
+          </div>
         </div>
-      </div>
+      </form>
     </>
   );
 };

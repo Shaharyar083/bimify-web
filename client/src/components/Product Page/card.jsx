@@ -25,6 +25,7 @@ import dlcould7 from "../../assets/images/product/dlcould7.png";
 import Line32 from "../../assets/images/other/Line32.png";
 
 const Card = ({ hit }) => {
+  // console.log("hits", hit)
   const { t, i18n } = useTranslation();
   const { accounts } = useMsal();
   const navigate = useNavigate();

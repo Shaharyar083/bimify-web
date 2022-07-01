@@ -31,7 +31,7 @@ const ShareListModal = ({ shareModalOpen, shareModalClose }) => {
 
   const searchUser = async () => {
     const res = await getUserDetail({ email: input });
-    console.log('kkk', res)
+    // console.log('kkk', res)
     if (res?.userExist) {
       setFirend(res?.user);
       setError("");

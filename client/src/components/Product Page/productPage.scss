@@ -949,7 +949,7 @@ margin-top: -5px !important;
           .p_card {
             margin-right: 10px;
             margin-bottom: 20px;
-            width: 280px !important;
+            width: 272px !important;
           }
         }
       }
@@ -972,23 +972,6 @@ margin-top: -5px !important;
     }
   }
 }
-
-
-
-@media screen and (max-width: 1250px) {
-  .product-page {
-    .main-container {
-      .product-section {
-        .ais-Hits {
-          .ais-Hits-list {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-      }
-    }
-  }
-}
-
 
 
 @media screen and (max-width: 1160px) {

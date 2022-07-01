@@ -18,7 +18,6 @@ import Section from "./Section";
 
 const Filter = () => {
   const { t, i18n } = useTranslation();
-
   const searched = useSelector((store) => store.product.search);
   const selectedCategory = useSelector((store) => store.product.category);
 
@@ -36,7 +35,9 @@ const Filter = () => {
       <div className="text mt-2">{t("product.34")}</div>
       <div className="text mt-3">{t("product.6")}</div>
       <div className="input-search">
-        <CustomAlgoliaSearch defaultRefinement={searched} />
+        <CustomAlgoliaSearch
+          defaultRefinement={searched}
+        />
       </div>
       <div className="category-search">
         <Section title="Category" defaultExpanded={true}>
@@ -99,13 +100,12 @@ const Filter = () => {
         </Section>
       </div>
       <div className="rest-filters-button">
-
-      <ClearRefinements
-        clearsQuery
-        translations={{
-          reset: "Reset all filters",
-        }}
-      />
+        <ClearRefinements
+          clearsQuery
+          translations={{
+            reset: "Reset all filters",
+          }}
+        />
       </div>
     </div>
   );

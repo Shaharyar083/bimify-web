@@ -19,22 +19,31 @@ import brand from "../../assets/images/product/brand.png";
 import { FaArrowLeft } from "react-icons/fa";
 
 const ProductPage = ({ product }) => {
-  const { t, i18n } = useTranslation();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  let categories = [...(product?.categories ?? [])];
+  const generalArrayRawData = product?.meta_data?.find(
+    (ele) => ele?.key === "general"
+  );
+  const technicalDetailsRawData = product?.meta_data?.find(
+    (ele) => ele?.key === "technical_details"
+  );
+  const dimensionsRawData = product?.meta_data?.find(
+    (ele) => ele?.key === "dimensions"
+  );
+  // const { t, i18n } = useTranslation();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
+  // let categories = [...(product?.categories ?? [])];
 
-  const getCategoryName = (category) => {
-    let name = category;
-    if (name.includes("&amp;")) name = name.replace(/&amp;/gi, "&");
+  // const getCategoryName = (category) => {
+  //   let name = category;
+  //   if (name.includes("&amp;")) name = name.replace(/&amp;/gi, "&");
 
-    return name;
-  };
+  //   return name;
+  // };
 
-  const handleCategory = (name) => {
-    dispatch(setCategory(name));
-    navigate("/product");
-  };
+  // const handleCategory = (name) => {
+  //   dispatch(setCategory(name));
+  //   navigate("/product");
+  // };
 
   return (
     <div className="bimroom-product-page">
@@ -72,15 +81,22 @@ const ProductPage = ({ product }) => {
           <img src={brand} alt="" />
         </div>
       </div>
-
       <div className="product-view-desc-section">
         <ProductView product={product} />
         <ProductDescription description={product?.description} />
       </div>
 
-      <ProductInfo product={product} />
+      {generalArrayRawData === undefined &&
+      technicalDetailsRawData === undefined &&
+      dimensionsRawData === undefined ? (
+        "No Product Info to Show"
+      ) : (
+        <ProductInfo product={product} />
+      )}
+
       <ProductReview productID={product?.id} />
       <RelatedProducts relatedProductIDs={product?.related_ids} />
+      {/* </> */}
     </div>
   );
 };

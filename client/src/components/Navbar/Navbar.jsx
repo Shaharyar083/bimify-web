@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const handleAccountModal = () => setAccountModal(!openAccountModal);
 
-  console.log("aaaa", accounts);
+  // console.log("aaaa", accounts);
   return (
     <>
       <div className="navbar-component">
