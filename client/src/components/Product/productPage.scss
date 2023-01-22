@@ -5,6 +5,21 @@
   max-width: 1366px;
   margin: auto;
 
+  .goback {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      margin-left: 10px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+
   .top-back-wrapper {
     display: flex;
     justify-content: space-between;

@@ -44,8 +44,8 @@ export const msalConfig = {
     clientId: "cfe6e535-2e20-49b8-b772-b9ae73c86c18", // This is the ONLY mandatory field that you need to supply.
     authority: b2cPolicies.authorities.signUpSignIn.authority, // Use a sign-up/sign-in user-flow as a default authority
     knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
-    redirectUri: "https://bimifyalgolia.netlify.app", // Points to window.location.origin. You must register this URI on Azure Portal/App Registration.
-    // redirectUri: "http://localhost:3000/", // Points to window.location.origin. You must register this URI on Azure Portal/App Registration.
+    // redirectUri: "https://bimifyalgolia.netlify.app", // Points to window.location.origin. You must register this URI on Azure Portal/App Registration.
+    redirectUri: "http://localhost:3000/", // Points to window.location.origin. You must register this URI on Azure Portal/App Registration.
     postLogoutRedirectUri: "/", // Indicates the page to navigate after logout.
     navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
   },

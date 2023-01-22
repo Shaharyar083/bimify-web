@@ -75,6 +75,11 @@ const ProductPage = ({ product }) => {
         <div className="extra"></div>
       </div> */}
 
+      <div className="goback" onClick={() => {}}>
+        <FaArrowLeft />
+        <span>Back</span>
+      </div>
+
       <div className="title-brand-wrapper">
         <div className="title">{product?.name}</div>
         <div className="brand">
